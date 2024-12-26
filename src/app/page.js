@@ -5,8 +5,8 @@
 
 export default function Home() {
   return (
-    <div className="text-green-500">
-      Hi, I am home page of noskathonlite website
+    <div className="font-ibmplex font-extrabold">
+      Hi, I am home page of noskathonlite website 2025
     </div>
   );
 }
