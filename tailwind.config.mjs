@@ -10,6 +10,7 @@ export default {
     extend: {
       colors: {
         'custom-green': '#1D7D40',
+        'custom-black': "#1E1E1E",
         background: "var(--background)",
         foreground: "var(--foreground)",
       },

@@ -1,5 +1,6 @@
 import React from 'react';
 import { useState } from 'react';
+import Image from 'next/image';
 
 const Header = () => {
   const [showDropdown, setShowDropdown] = useState(false);
@@ -50,6 +51,7 @@ const Header = () => {
               <img
                 className="h-6 w-6"
                 src="https://cdn-icons-png.flaticon.com/128/13958/13958298.png"
+                alt="DropDownIcon"
               />
             </button>
           </div>
