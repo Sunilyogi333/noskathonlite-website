@@ -7,14 +7,12 @@ import Header from "../components/Header";
 
 export default function Home() {
   return (
-   <div>
-       <Header/>
+    <div>
+      <Header />
 
-  
-    <div className="text-green-500">
-      Hi, I am home page of noskathonlite website
-
-   </div>
-   </div>
+      <div className="text-green-500">
+        Hi, I am home page of noskathonlite website
+      </div>
+    </div>
   );
 }
