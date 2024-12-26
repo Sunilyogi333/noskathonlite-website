@@ -4,6 +4,7 @@ export default {
     "./src/pages/**/*.{js,ts,jsx,tsx,mdx}",
     "./src/components/**/*.{js,ts,jsx,tsx,mdx}",
     "./src/app/**/*.{js,ts,jsx,tsx,mdx}",
+    "./src/*.{js,ts,jsx,tsx,mdx}",
   ],
   theme: {
     screens: {
@@ -32,6 +33,8 @@ export default {
         ibmplex: ["IBM Plex Mono", "sans-serif"],
       },
       colors: {
+        'custom-green': '#1D7D40',
+        'custom-black': "#1E1E1E",
         background: "var(--background)",
         foreground: "var(--foreground)",
       },

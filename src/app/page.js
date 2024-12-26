@@ -3,10 +3,18 @@
 // and structure the homepage as per the requirements.
 "use client";
 
+import Header from "@/Header";
+
 export default function Home() {
   return (
-    <div className="font-ibmplex font-extrabold">
-      Hi, I am home page of noskathonlite website 2025
-    </div>
+   <div>
+       <Header/>
+
+  
+    <div className="text-green-500">
+      Hi, I am home page of noskathonlite website
+
+   </div>
+   </div>
   );
 }
