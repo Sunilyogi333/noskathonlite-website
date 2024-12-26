@@ -3,7 +3,7 @@
 // and structure the homepage as per the requirements.
 "use client";
 
-import Header from "@/Header";
+import Header from "../components/Header";
 
 export default function Home() {
   return (
