@@ -12,8 +12,9 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata = {
-   title: "NOSKATHON LITE 2025 - Official Website",
-  description: "Welcome to the official website of NOSKATHON LITE 2025. Stay updated with all the latest events and information."
+  title: "NOSKATHON LITE 2025 - Official Website",
+  description:
+    "Welcome to the official website of NOSKATHON LITE 2025. Stay updated with all the latest events and information.",
 };
 
 export default function RootLayout({ children }) {
