@@ -12,6 +12,14 @@ body {
   scroll-behavior: smooth;
   box-sizing: border-box;
   overflow-x: hidden; /* Prevent horizontal scrollbars */
+
+  /* background-color:; */
+  background-image: url('/assets/svg/BG-GRID2.svg');
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+  min-height: 100vh;
+
 }
 
 body {
