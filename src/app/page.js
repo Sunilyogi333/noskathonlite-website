@@ -1,17 +1,25 @@
-// This is the main home page of the Noskathonlite website.
-// We will be working on this page. Import all your components here
-// and structure the homepage as per the requirements.
 "use client";
 
+import CountDown from "@/components/CountDown";
 import Header from "../components/Header";
+import HeroSection from "@/components/Hero";
 
 export default function Home() {
   return (
-    <div>
-      <Header />
+    <div className="flex flex-col h-screen">
+      {/* Fixed Header */}
+      <div className="fixed top-0 left-0 w-full z-50">
+        <Header />
+      </div>
 
-      <div className="text-green-500">
-        Hi, I am home page of noskathonlite website
+      {/* Scrollable Content */}
+      <div className="flex-1 overflow-y-auto mt-4"> 
+        <HeroSection />
+      </div>
+
+      {/* Fixed Countdown */}
+      <div className="fixed bottom-0 left-0 w-full z-50">
+        <CountDown />
       </div>
     </div>
   );

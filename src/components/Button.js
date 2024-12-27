@@ -1,6 +1,6 @@
 import Link from "next/link";
 //Pass link property for it to behave like a link, don't pass link if you want to handle events
-export const Button = ({ value, link = "", onClick,className="bg-nosk-green text-white p-2 rounded-md" }) => {
+export const Button = ({ value, link = "", onClick, className="bg-nosk-green text-white" }) => {
   return (
     <>
       {link !== "" ? (
@@ -12,7 +12,7 @@ export const Button = ({ value, link = "", onClick,className="bg-nosk-green text
           
         </Link>
       ) : (
-        <div onClick={onClick} role="button" tabIndex={0} className="bg-nosk-green text-white p-2 rounded-md">
+        <div onClick={onClick} role="button" tabIndex={0} className="bg-nosk-green text-white">
           {value}
         </div>
       )}
