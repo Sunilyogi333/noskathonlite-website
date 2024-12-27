@@ -1,10 +1,21 @@
-"use client"
-const Button = () => {
+import Link from "next/link";
+//Pass link property for it to behave like a link, don't pass link if you want to handle events
+export const Button = ({ value, link = "", onClick,className="bg-nosk-green text-white p-2 rounded-md" }) => {
   return (
-    <div>
-      Hi, I am Button Component.
-    </div>
-  )
-}
-
-export default Button
+    <>
+      {link !== "" ? (
+        <Link href={link}>
+          
+            <button className={className}>
+              {value}
+            </button>
+          
+        </Link>
+      ) : (
+        <div onClick={onClick} role="button" tabIndex={0} className="bg-nosk-green text-white p-2 rounded-md">
+          {value}
+        </div>
+      )}
+    </>
+  );
+};
