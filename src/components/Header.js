@@ -1,6 +1,6 @@
-import React from 'react';
-import { useState } from 'react';
-import Image from 'next/image';
+import React from "react";
+import { useState } from "react";
+import Image from "next/image";
 
 const Header = () => {
   const [showDropdown, setShowDropdown] = useState(false);
@@ -9,27 +9,29 @@ const Header = () => {
     { label: "About", id: "about" },
     { label: "Prizes", id: "prizes" },
     { label: "FAQs", id: "faqs" },
-    { label: "Contact Us", id: "contact" }
+    { label: "Contact Us", id: "contact" },
   ];
 
   const scrollToSection = (sectionId) => {
     const element = document.getElementById(sectionId);
     if (element) {
-      element.scrollIntoView({ behavior: 'smooth' });
+      element.scrollIntoView({ behavior: "smooth" });
     }
   };
 
   return (
-    <header className="bg-custom-green shadow-md fixed w-full top-0 z-50">
+    <header className="bg-nosk-green shadow-md fixed w-full top-0 z-50">
       <nav className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-20">
-          <div className="flex-shrink-0 sm:absolute sm:left-3 sm:top-[10px] sm:mx-0 mx-auto">
-            <img
-              src="https://nosk.org.np/site/images/nosk-logo.png"
-              alt="Nosk Logo"
-              className="h-14 w-14 bg-white rounded-full object-cover"
-            />
-          </div>
+        <div className="flex-shrink-0 sm:absolute sm:left-3 sm:top-[10px] sm:mx-0 mx-auto w-14 h-14 bg-nosk-white rounded-full flex items-center justify-center overflow-hidden">
+        <Image
+          src="/assets/svg/NOSK_Logo_with_Tagline 1.svg"
+          alt="Nosk Logo"
+          height={318}
+          width={318}
+          className="object-cover w-full h-full"
+        />
+      </div>
 
           <div className="hidden sm:flex flex-grow justify-center space-x-6">
             {navItems.map((item) => (
@@ -75,6 +77,16 @@ const Header = () => {
           </div>
         )}
       </nav>
+      {/* Adding the SVG image below the header */}
+      <div className="absolute w-full">
+      <Image
+          src="/assets/svg/ZaggedLineG.svg"
+          alt="Zagged Line"
+          width={440}        
+          height={28}         
+          className="h-full w-full m-auto"  
+        />
+      </div>
     </header>
   );
 };
