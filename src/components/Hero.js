@@ -4,16 +4,21 @@ import { Button } from "./Button.js";
 const HeroSection = () => {
   return (
     <div className="h-screen hero-section text-white w-full flex items-center justify-center min-h-screen text-center">
-      <div className="flex flex-col lg:flex-row gap-20 items-center justify-center lg:mt-8 lg:items-start w-full">
+      <div className="flex flex-col md:flex-row lg:flex-row md:12 lg:gap-20 items-center justify-center lg:mt-8 w-full">
         <div className="text-center lg:text-left flex-col items-center justify-center">
-          <h1 className="text-4xl lg:text-5xl text-nosk-black font-bold mb-4">
-            NOSKATHON{" "}
-            <span className="bg-nosk-green text-nosk-white px-2">LITE</span>
-          </h1>
-          <p className="text-2xl lg:text-7xl mb-6 font-normal text-center">
+          <div className="text-4xl font-bold md:text-5xl lg:text-5xl mb-4 gap-2 w-full flex flex-col items-center justify-center lg:flex-row">
+            <p className="text-nosk-black text-center">
+              NOSKATHON
+            </p>
+            <p className="bg-nosk-green inline-block text-nosk-white text-center">
+              LITE
+            </p>
+          </div>
+
+          <p className="text-2xl md:text-4xl lg:text-7xl mb-6 font-normal text-center">
             2025
           </p>
-          <p className="text-sm  lg:text-xl text-nosk-green font-bold mb-8">
+          <p className="text-center text-sm md:text-lg lg:text-xl text-nosk-green font-bold mb-8">
             10<sup>th</sup> January, 2025 - 11<sup>th</sup> January, 2025
           </p>
 
@@ -47,13 +52,13 @@ const HeroSection = () => {
         </div>
 
         {/* Adding the SVG image below the header */}
-        <div className="flex items-center justify-center w-full lg:w-auto lg:mt-0">
+        <div className="flex items-center justify-center w-3/6 lg:w-auto lg:mt-0">
           <Image
             src="/assets/svg/NOSKATHON.png"
             alt="Zagged Line"
             width={442} // Original width of the image
             height={341.02} // Original height of the image
-            className="w-3/4 object-fit lg:h-44 lg:w-auto"
+            className="w-3/4 md:w-3/4/ h-3/6 lg:h-44 lg:w-auto object-contain"
           />
         </div>
       </div>

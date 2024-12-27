@@ -13,7 +13,7 @@ export default function Home() {
       </div>
 
       {/* Scrollable Content */}
-      <div className="flex-1 overflow-y-auto mt-4"> 
+      <div className="flex-1 overflow-y-auto mt-38 px-8 md:px-10 lg:px-16"> 
         <HeroSection />
       </div>
 
