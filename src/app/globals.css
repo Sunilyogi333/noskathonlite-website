@@ -14,19 +14,48 @@ body {
   overflow-x: hidden; /* Prevent horizontal scrollbars */
 
   /* background-color:; */
-  background-image: url('/assets/svg/BG-GRID2.svg');
+  background-image: url("/assets/svg/BG-GRID2.svg");
   background-size: cover;
   background-position: center center;
   background-repeat: no-repeat;
   min-height: 100vh;
 
   /* background-color: black */
-
 }
 
 body {
   @apply text-nosk-black;
   /* @apply bg-secondaryContainer; */
+}
+
+@layer base {
+  /* Responsive Headings: */
+  h1 {
+    @apply text-xl sm:text-5xl md:text-6xl lg:text-7xl;
+  }
+
+  h2 {
+    @apply text-3xl sm:text-4xl md:text-5xl lg:text-6xl;
+  }
+
+  h3 {
+    @apply text-2xl sm:text-3xl md:text-4xl lg:text-5xl;
+  }
+
+  h4 {
+    @apply text-xl sm:text-2xl md:text-3xl lg:text-4xl;
+  }
+
+  h5 {
+    @apply text-lg sm:text-xl md:text-2xl lg:text-3xl;
+  }
+
+  h6 {
+    @apply text-base sm:text-lg md:text-xl lg:text-2xl;
+  }
+  p {
+    @apply text-base md:text-lg text-nosk-grey;
+  }
 }
 
 .logo-container {
@@ -40,7 +69,7 @@ body {
 }
 
 .logo-container::after {
-  content: '';
+  content: "";
   position: absolute;
   top: 0;
   right: -100%; /* Start from the right side */
