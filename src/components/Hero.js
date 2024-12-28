@@ -10,21 +10,19 @@ const HeroSection = () => {
             <p className="text-nosk-black text-center">NOSKATHON</p>
             <p className="bg-nosk-green inline-block text-nosk-white text-center">
               LITE
-            </p>
+              </p>
           </div>
 
-          <p className="text-2xl md:text-4xl lg:text-7xl mb-6 font-normal text-center">
-            2025
-          </p>
-          <p className="text-center text-sm md:text-lg lg:text-xl text-nosk-green font-bold mb-8">
+          <h1 className="mb-6 font-normal text-center">2025</h1>
+          <h5 className="text-center text-nosk-green font-bold mb-8">
             10<sup>th</sup> January, 2025 - 11<sup>th</sup> January, 2025
-          </p>
+          </h5>
 
           <div className="relative flex items-center justify-center">
             <Button
               value="REGISTER NOW"
               link="/register"
-              className="bg-nosk-green text-nosk-white text-2xl lg:text-4xl font-bold py-4 px-6 relative z-10"
+              className="bg-nosk-green text-nosk-white text-xl sm:text-2xl md:text-3xl lg:text-4xl lg:font-bold py-4 px-6 relative z-10"
             />
 
             {/* <div className="absolute right-28 top-0 transform translate-x-1/2 ">

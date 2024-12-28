@@ -21,7 +21,7 @@ const TextBox = ({ title, content, bgcolor }) => {
 
                 <div>
 
-                    <p className="font-mono text-sm mb-10">
+                    <p className="font-mono text-nosk-white text-sm mb-10">
                         {content}
                     </p>
                     <Image
