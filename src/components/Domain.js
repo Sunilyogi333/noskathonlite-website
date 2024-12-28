@@ -1,5 +1,6 @@
 "use client";
 import React, { useState } from "react";
+import Section from "./Section";
 
 const Domain = () => {
   const [activeSection, setActiveSection] = useState(1); // Initially expand the first card
@@ -16,7 +17,10 @@ const Domain = () => {
   ];
 
   return (
-    <div className="flex justify-center">
+    <div className="flex flex-col items-center space-y-5">
+      <div className="w-full">
+        <Section title="Theme" />
+      </div>
       <div className="w-full md:w-1/2">
         <div className="flex flex-wrap md:flex-nowrap space-x-2 bg-black p-4 h-[300px]">
           {sections.map((section) => (
