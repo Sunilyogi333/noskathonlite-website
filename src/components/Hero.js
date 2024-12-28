@@ -13,7 +13,7 @@ const HeroSection = () => {
             </h1>
           </div>
 
-          <h1 className="mb-6 font-light text-center">2025</h1>
+          <h1 className="mb-6 text-nosk-black font-light text-center">2025</h1>
           <h5 className="text-center text-nosk-green font-bold mb-8">
             10<sup>th</sup> January, 2025 - 11<sup>th</sup> January, 2025
           </h5>
