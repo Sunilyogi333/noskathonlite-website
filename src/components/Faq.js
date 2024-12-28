@@ -1,14 +1,11 @@
 "use client";
-
-import React from "react";
 import { useState } from "react";
-import Image from "next/image";
 
 const Faq = ({ question, answer }) => {
-  const [isExpanded, setIsExpanded] = React.useState(false);
+  const [isExpanded, setIsExpanded] = useState(false);
 
   return (
-    <div className="relative max-w-md mx-auto md:max-w-3xl py-0 my-4">
+    <div className="relative max-w-md mx-auto md:max-w-3xl py-0 my-4" onClick={() => setIsExpanded(!isExpanded)}>
       <div className="bg-nosk-white transition-shadow drop-shadow-2xl hover:border-2 border-nosk-green hover:shadow-lg">
         <div className="absolute left-0 top-0 bottom-0 w-4 bg-nosk-green"></div>
 
@@ -32,7 +29,7 @@ const Faq = ({ question, answer }) => {
         </div>
 
         <div
-          className={`overflow-hidden transition-all duration-700 ease-in-out ${
+          className={`overflow-hidden transition-all duration-100 ease-in-out ${
             isExpanded ? "max-h-screen" : "max-h-0"
           }`}
           style={{ transitionProperty: "max-height" }}

@@ -26,7 +26,6 @@ export default function TeamSection() {
 
   return (
     <div className="bg-gray-100 py-10 px-4">
-      <h1 className="text-4xl font-bold text-center text-nosk-green mb-8">Our Team</h1>
       <div className="max-w-7xl mx-auto  grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
         {teamMembers.map((member, index) => (
           <div
