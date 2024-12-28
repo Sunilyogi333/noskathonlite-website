@@ -51,8 +51,7 @@ export default function TeamSection() {
   ];
 
   return (
-    <div className="bg-gray-100 py-10 px-4">
-      <Section title="Our Team"/>
+    <div className="py-10 px-4">
 {/* Coordinator */}
       <div className="mt-4 max-w-full mx-auto px-4 sm:px-6 lg:px-8 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
   {teamlead.map((member, index) => (
