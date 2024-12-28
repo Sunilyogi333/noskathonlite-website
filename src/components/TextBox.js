@@ -5,7 +5,7 @@ import Image from 'next/image';
 const TextBox = ({ title, content, bgcolor }) => {
     return (
         <div className="max-w-md mx-4 my-6 relative">
-            <div className={`bg-${bgcolor} text-white rounded-3xl p-8 flex flex-col space-y-4`}>
+            <div className={`bg-${bgcolor} text-nosk-white rounded-3xl p-8 flex flex-col space-y-4`}>
                 <Image
                     src="/assets/png/Wire.png"
                     alt="Wire Image"
@@ -14,7 +14,7 @@ const TextBox = ({ title, content, bgcolor }) => {
                     className="absolute top-0 left-[-20px] transform scale-x-[-1]"
                 />
                 <div>
-                    <h2 className="text-white text-4xl font-bold mb-4 uppercase text-center">
+                    <h2 className="text-nosk-white text-4xl font-bold mb-4 uppercase text-center">
                         {title}
                     </h2>
                 </div>

@@ -3,13 +3,11 @@ import { Button } from "./Button.js";
 
 const HeroSection = () => {
   return (
-    <div className="h-screen hero-section text-white w-full flex items-center justify-center min-h-screen text-center">
-      <div className="flex flex-col md:flex-row lg:flex-row md:12 lg:gap-20 items-center justify-center lg:mt-8 w-full">
+    <div className="h-screen hero-section text-white w-full flex items-center justify-center min-h-screen text-center px-8 md:px-10 lg:px-16 ">
+      <div className="flex flex-col md:flex-row lg:flex-row sm:mt-4 lg:gap-20 items-center justify-center lg:mt-8 w-full">
         <div className="text-center lg:text-left flex-col items-center justify-center">
           <div className="text-4xl font-bold md:text-5xl lg:text-5xl mb-4 gap-2 w-full flex flex-col items-center justify-center lg:flex-row">
-            <p className="text-nosk-black text-center">
-              NOSKATHON
-            </p>
+            <p className="text-nosk-black text-center">NOSKATHON</p>
             <p className="bg-nosk-green inline-block text-nosk-white text-center">
               LITE
             </p>
@@ -52,13 +50,13 @@ const HeroSection = () => {
         </div>
 
         {/* Adding the SVG image below the header */}
-        <div className="flex items-center justify-center w-3/6 lg:w-auto lg:mt-0">
+        <div className="flex items-center justify-center w-full lg:w-auto mt-12">
           <Image
-            src="/assets/svg/NOSKATHON.png"
-            alt="Zagged Line"
-            width={442} // Original width of the image
-            height={341.02} // Original height of the image
-            className="w-3/4 md:w-3/4/ h-3/6 lg:h-44 lg:w-auto object-contain"
+            src="/assets/svg/NOSKATHON_LOGO.svg"
+            alt="NOSKATHON Logo"
+            width={442}
+            height={341.02}
+            className="h-28 w-auto sm:h-28 md:h-40 lg:h-52 xl:h-60 object-contain"
           />
         </div>
       </div>
