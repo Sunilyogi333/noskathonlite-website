@@ -30,7 +30,7 @@ body {
 @layer base {
   /* Responsive Headings: */
   h1 {
-    @apply text-xl sm:text-5xl md:text-6xl lg:text-7xl;
+    @apply text-4xl sm:text-5xl md:text-6xl lg:text-7xl;
   }
 
   h2 {

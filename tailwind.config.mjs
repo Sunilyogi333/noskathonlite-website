@@ -17,13 +17,6 @@ export default {
       "3xl": "1920px", // For large 1080p and ultra-wide monitors
       "4xl": "2560px", // For 2K and 4K displays
     },
-    colors: {
-      "nosk-green": "#1d7d40",
-      "nosk-yellow": "#ffb618",
-      "nosk-white": "#f4f4f5",
-      "nosk-black": "#060709",
-      "nosk-grey": "#1e1e1e",
-    },
     extend: {
       maxWidth: {
         "8xl": "96rem", // 1536px
@@ -33,6 +26,11 @@ export default {
         ibmplex: ["IBM Plex Mono", "sans-serif"],
       },
       colors: {
+        "nosk-green": "#1d7d40",
+        "nosk-yellow": "#ffb618",
+        "nosk-white": "#f4f4f5",
+        "nosk-black": "#060709",
+        "nosk-grey": "#1e1e1e",
         "custom-green": "#1D7D40",
         "custom-black": "#1E1E1E",
         background: "var(--background)",

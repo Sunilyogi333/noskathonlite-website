@@ -24,27 +24,28 @@ const Footer = () => {
           <Image
             src="/assets/svg/ZaggedLine_G_Y.svg"
             alt="Zagged Line"
-            width={1920} 
-            height={120} 
-            className="object-cover" 
+            width={1920}
+            height={120}
+            className="object-cover"
           />
         </div>
-        <div className="flex flex-col text-2xl md:text-xl lg:text-lg text-nosk-white w-full font-semibold text-center relative bg-nosk-green">
+        <div className="flex flex-col text-nosk-white w-full font-semibold text-center relative bg-nosk-green">
           <div className="px-8 md:px-10 lg:px-16">
             <div className="flex flex-col lg:flex-row gap-2 justify-center items-center mb-4">
-              <p>Opening minds</p>
-              <p>through OPEN SOURCE</p>
+              <h4 className="text-2xl md:text-3xl lg:text-4xl xl:text-5xl 2xl:text-6xl">
+                Opening minds through OPEN SOURCE
+              </h4>
             </div>
 
-            <span className="text-nosk-white text-2xl md:text-xl lg:text-4xl font-semibold text-center mt-8">
+            <h4 className="text-nosk-white font-semibold text-center mt-8">
               Links
-            </span>
+            </h4>
             <div className="flex flex-row justify-center items-center">
               {footerItems.map((item) => (
                 <button
                   key={item.label}
                   onClick={() => scrollToSection(item.id)}
-                  className="text-nosk-white opacity-60 hover:text-gray-200 px-3 py-2 text-lg font-lar transition-transform hover:scale-105"
+                  className="text-nosk-white opacity-60 hover:text-gray-200 px-3 py-2 text-base sm:text-lg md:text-xl lg:text-2xl font-lar transition-transform hover:scale-105"
                 >
                   {item.label}
                 </button>
