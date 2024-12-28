@@ -23,15 +23,15 @@ const Header = () => {
     <header className="bg-nosk-green shadow-md fixed w-full top-0 z-50">
       <nav className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-20">
-        <div className="flex-shrink-0 sm:absolute sm:left-3 sm:top-[10px] sm:mx-0 mx-auto w-14 h-14 bg-nosk-white rounded-full flex items-center justify-center overflow-hidden">
-        <Image
-          src="/assets/svg/NOSK_Logo_with_Tagline 1.svg"
-          alt="Nosk Logo"
-          height={318}
-          width={318}
-          className="object-cover w-full h-full"
-        />
-      </div>
+          <div className="flex-shrink-0 sm:absolute sm:left-3 sm:top-[10px] sm:mx-0 mx-auto w-14 h-14 bg-nosk-white rounded-full flex items-center justify-center overflow-hidden">
+            <Image
+              src="/assets/svg/NOSK_Logo_with_Tagline 1.svg"
+              alt="Nosk Logo"
+              height={318}
+              width={318}
+              className="object-cover w-full h-full"
+            />
+          </div>
 
           <div className="hidden sm:flex flex-grow justify-center space-x-6">
             {navItems.map((item) => (
@@ -79,12 +79,12 @@ const Header = () => {
       </nav>
       {/* Adding the SVG image below the header */}
       <div className="absolute w-full">
-      <Image
+        <Image
           src="/assets/svg/ZaggedLineG.svg"
           alt="Zagged Line"
-          width={440}        
-          height={28}         
-          className="h-full w-full m-auto"  
+          width={440}
+          height={28}
+          className="h-full w-full m-auto"
         />
       </div>
     </header>
