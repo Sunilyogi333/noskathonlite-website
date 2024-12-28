@@ -2,26 +2,43 @@
 
 import CountDown from "@/components/CountDown";
 import Header from "../components/Header";
-import HeroSection from "@/components/Hero";
+import Hero from "@/components/Hero";
+import Footer from "@/components/Footer";
+import Faq from "@/components/Faq";
+import About from "@/components/About";
+import Section from "@/components/Section";
+import Team from "@/components/Team";
 import Domain from "../components/Domain";
 import TeamSection from "../components/TeamSection";
 export default function Home() {
   return (
     <div className="flex flex-col h-screen">
       {/* Fixed Header */}
-      <div className="flex-none">
+      <div className="fixed top-0 left-0 w-full z-50 overflow-hidden">
         <Header />
       </div>
 
       {/* Scrollable Content */}
-      <div className="flex-1 overflow-y-auto px-8 md:px-10 lg:px-16">
-        <HeroSection />
-        <Domain />
-        <TeamSection/>
+      <div className="flex-1 overflow-y-auto mt-38 overflow-hidden">
+        <Hero />
+
+        <Section title="ABOUT" />
+        <About />
+
+        <Section title="FAQs" />
+        <Faq
+          question={"which is the Best team from OC??"}
+          answer={"Tech Team"}
+        />
+
+        <Section title="OUR TEAM" />
+        <Team />
+
+        <Footer />
       </div>
 
       {/* Fixed Countdown */}
-      <div className="flex-none">
+      <div className="sticky bottom-0 w-full z-50 ">
         <CountDown />
       </div>
     </div>

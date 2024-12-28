@@ -33,12 +33,12 @@ const Header = () => {
             />
           </div>
 
-          <div className="hidden sm:flex flex-grow justify-center space-x-6">
+          <div className="hidden sm:flex flex-grow justify-center space-x-1 md:space-x-3 lg:space-x-6 xl:space-x-10">
             {navItems.map((item) => (
               <button
                 key={item.label}
                 onClick={() => scrollToSection(item.id)}
-                className="text-white hover:text-gray-200 px-3 py-2 text-xl font-lar transition-transform hover:scale-105"
+                className="text-white hover:text-gray-200 px-3 py-2 text-base sm:text-lg md:text-xl lg:text-2xl font-lar transition-transform hover:scale-110 hover:font-extrabold"
               >
                 {item.label}
               </button>
