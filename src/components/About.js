@@ -6,7 +6,7 @@ import TextBox from "./TextBox";
 
 const About = () => {
   const content =
-    "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla quam velit, vulputate eu pharetra nec, mattis ac neque.";
+    "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla quam velit, vulputate eu pharetra nec, mattis ac neque. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla quam velit, vulputate eu pharetra nec, mattis ac neque.";
 
   return (
     <div className="px-8 md:px-10 lg:px-16 mt-14">

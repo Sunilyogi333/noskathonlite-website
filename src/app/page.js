@@ -24,6 +24,9 @@ export default function Home() {
         <Section title="ABOUT" />
         <About />
 
+        <Section title="DOMAINS" />
+        <Domain />
+
         <Section title="FAQs" />
         <Faq
           question={"which is the Best team from OC??"}

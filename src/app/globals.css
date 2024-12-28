@@ -21,6 +21,9 @@ body {
   min-height: 100vh;
   /* background-color: black */
 }
+::-webkit-scrollbar {
+  display: none; /* Hides the scrollbar in webkit browsers */
+}
 
 body {
   @apply text-nosk-black;

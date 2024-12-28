@@ -17,10 +17,7 @@ const Domain = () => {
   ];
 
   return (
-    <div className="flex flex-col items-center space-y-5">
-      <div className="w-full">
-        <Section title="Theme" />
-      </div>
+    <div className="flex flex-col items-center space-y-5 my-8">
       <div className="w-full md:w-1/2">
         <div className="flex flex-wrap md:flex-nowrap space-x-2 bg-black p-4 h-[300px]">
           {sections.map((section) => (
