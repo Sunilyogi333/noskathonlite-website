@@ -1,25 +1,52 @@
 "use static"
 
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useRef} from 'react';
 
 const Participants = () => {
 
     const [count, setCount] = useState(1);
+    const [isVisible, setIsVisible] = useState(false); //trigger the counter once 20% of the section is visible
+    const componentRef = useRef(null);
 
     useEffect(() => {
-        if (count < 100) {
-          const timer = setTimeout(() => {
-            setCount(prev => prev + 1);
-          }, 20); 
-          
-          return () => clearTimeout(timer);
+      if (isVisible && count < 100) {
+        const timer = setTimeout(() => {
+          setCount(prev => prev + 1);
+        }, 20);
+        
+        return () => clearTimeout(timer);
+      }
+    }, [count, isVisible]); 
+
+    useEffect(() => {
+      const observer = new IntersectionObserver(
+        (entries) => {
+          if (entries[0].isIntersecting) {
+            setIsVisible(true);
+          }
+        },
+        { threshold: 0.2 } //can change the threshold here, 0.2=20% visibility
+      );
+  
+      if (componentRef.current) {
+        observer.observe(componentRef.current);
+      }
+  
+      return () => {
+        if (componentRef.current) {
+          observer.unobserve(componentRef.current);
         }
-      }, [count]);
+      };
+    }, []);
+
+
+      
     return (
-      <div className="flex flex-col items-center w-full max-w-2xl mx-auto p-4">
+      
+      <div ref={componentRef} className="flex flex-col items-center w-full max-w-2xl mx-auto p-4">
       
         <div className="mb-6">
-          <span className="text-xl font-medium border-b-8 border-nosk-green px-2">
+          <span className="text-xl font-normal border-b-8 border-nosk-green px-2">
             Expected Participants
           </span>
         </div>
