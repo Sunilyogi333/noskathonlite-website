@@ -22,7 +22,7 @@ const Participants = () => {
           setIsVisible(true);
         }
       },
-      { threshold: 0.2 } // can change the threshold here, 0.2=20% visibility
+      { threshold: 0.4 } // can change the threshold here, 0.2=20% visibility
     );
 
     if (componentRef.current) {
@@ -44,9 +44,9 @@ const Participants = () => {
         </span>
       </div>
 
-      <div className="flex justify-center gap-10 w-full">
+      <div className="flex justify-center gap-16 w-full">
         <div className="text-center">
-          <div className="text-4xl sm:text-5xl md:text-6xl font-extrabold mb-2">2-4</div>
+        <div className="text-4xl sm:text-5xl md:text-6xl font-extrabold mb-2 whitespace-nowrap">2&#8209;4</div>
           <div className="text-xs sm:text-sm md:text-base text-nosk-grey">Per Team</div>
         </div>
 

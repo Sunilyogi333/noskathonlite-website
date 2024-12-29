@@ -5,7 +5,7 @@ const Faq = ({ question, answer }) => {
   const [isExpanded, setIsExpanded] = useState(false);
 
   return (
-    <div className="relative max-w-md mx-auto md:max-w-3xl py-0 my-8" onClick={() => setIsExpanded(!isExpanded)}>
+    <div className="w-full max-w-2xl mx-auto my-4 rounded-lg overflow-hidden border border-gray-200 hover:border-gray-300 transition-all duration-200 relative" onClick={() => setIsExpanded(!isExpanded)}>
       <div className="bg-nosk-white transition-shadow drop-shadow-2xl hover:border-2 border-nosk-green hover:shadow-lg">
         <div className="absolute left-0 top-0 bottom-0 w-4 bg-nosk-green"></div>
 
