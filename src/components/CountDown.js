@@ -50,32 +50,34 @@ const CountDown = () => {
         className="absolute top-1  left-[-50px] w-[130px] md:w-[180px] transform scale-x-[-1]"
       />
 
-      <div className="flex flex-col  items-center lg:flex-row gap-2  space-y-2 md:space-y-3">
-        <p className="text-base md:text-lg font-semibold text-center">LIVE IN:</p>
+      <div className="flex flex-col items-center lg:flex-row gap-0 lg:gap-10 space-y-2 md:space-y-3">
+        <p className="text-base text-nosk-white md:text-4xl font-semibold text-center">
+          LIVE IN:
+        </p>
         <div className="flex flex-wrap space-x-2 md:space-x-3 text-2xl md:text-3xl md:pt-3 md:pb-2">
           <div className="text-center">
-            <p className="font-bold text-3xl m-0 leading-none">
+            <p className="font-bold text-3xl m-0 leading-none text-nosk-white">
               {timeLeft.days}
             </p>
-            <p className="text-[0.5rem] opacity-50 m-1 leading-none">DAYS</p>
+            <p className="text-[0.5rem] text-nosk-white opacity-50 m-1 leading-none">DAYS</p>
           </div>
           <div className="text-center">
-            <p className="font-bold text-3xl m-0 leading-none">
+            <p className="font-bold text-3xl m-0 leading-none text-nosk-white">
               {timeLeft.hours}
             </p>
-            <p className="text-[0.5rem] opacity-50 m-1 leading-none">HOURS</p>
+            <p className="text-[0.5rem] text-nosk-white opacity-50 m-1 leading-none">HOURS</p>
           </div>
           <div className="text-center">
-            <p className="font-bold text-3xl m-0 leading-none">
+            <p className="font-bold text-3xl m-0 leading-none text-nosk-white">
               {timeLeft.minutes}
             </p>
-            <p className="text-[0.5rem] opacity-50 m-1 leading-none">MINUTES</p>
+            <p className="text-[0.5rem] text-nosk-white opacity-50 m-1 leading-none">MINUTES</p>
           </div>
           <div className="text-center">
-            <p className="font-bold text-3xl m-0 leading-none">
+            <p className="font-bold text-3xl m-0 leading-none text-nosk-white">
               {timeLeft.seconds}
             </p>
-            <p className="text-[0.5rem] opacity-50 m-1 leading-none">SECONDS</p>
+            <p className="text-[0.5rem] text-nosk-white opacity-50 m-1 leading-none">SECONDS</p>
           </div>
         </div>
       </div>

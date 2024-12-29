@@ -1,81 +1,69 @@
-"use static"
-
-import { useState, useEffect, useRef} from 'react';
+import { useState, useEffect, useRef } from 'react';
 
 const Participants = () => {
+  const [count, setCount] = useState(1);
+  const [isVisible, setIsVisible] = useState(false); // trigger the counter once 20% of the section is visible
+  const componentRef = useRef(null);
 
-    const [count, setCount] = useState(1);
-    const [isVisible, setIsVisible] = useState(false); //trigger the counter once 20% of the section is visible
-    const componentRef = useRef(null);
+  useEffect(() => {
+    if (isVisible && count < 100) {
+      const timer = setTimeout(() => {
+        setCount((prev) => prev + 1);
+      }, 20);
 
-    useEffect(() => {
-      if (isVisible && count < 100) {
-        const timer = setTimeout(() => {
-          setCount(prev => prev + 1);
-        }, 20);
-        
-        return () => clearTimeout(timer);
-      }
-    }, [count, isVisible]); 
+      return () => clearTimeout(timer);
+    }
+  }, [count, isVisible]);
 
-    useEffect(() => {
-      const observer = new IntersectionObserver(
-        (entries) => {
-          if (entries[0].isIntersecting) {
-            setIsVisible(true);
-          }
-        },
-        { threshold: 0.2 } //can change the threshold here, 0.2=20% visibility
-      );
-  
-      if (componentRef.current) {
-        observer.observe(componentRef.current);
-      }
-  
-      return () => {
-        if (componentRef.current) {
-          observer.unobserve(componentRef.current);
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      (entries) => {
+        if (entries[0].isIntersecting) {
+          setIsVisible(true);
         }
-      };
-    }, []);
+      },
+      { threshold: 0.4 } // can change the threshold here, 0.2=20% visibility
+    );
 
+    if (componentRef.current) {
+      observer.observe(componentRef.current);
+    }
 
-      
-    return (
-      
-      <div ref={componentRef} className="flex flex-col items-center w-full max-w-2xl mx-auto p-4 my-6">
-      
-        <div className="mb-6">
-          <span className="text-xl font-normal border-b-8 border-nosk-green px-2">
-            Expected Participants
-          </span>
+    return () => {
+      if (componentRef.current) {
+        observer.unobserve(componentRef.current);
+      }
+    };
+  }, []);
+
+  return (
+    <div ref={componentRef} className="flex flex-col items-center w-full max-w-3xl mx-auto p-6 my-8">
+      <div className="mb-8">
+        <span className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-medium border-b-8 border-nosk-green px-3">
+          Expected Participants
+        </span>
+      </div>
+
+      <div className="flex justify-center gap-16 w-full">
+        <div className="text-center">
+        <div className="text-4xl sm:text-5xl md:text-6xl font-extrabold mb-2 whitespace-nowrap">2&#8209;4</div>
+          <div className="text-xs sm:text-sm md:text-base text-nosk-grey">Per Team</div>
         </div>
-  
-      
-        <div className="flex justify-center gap-8 w-full">
-      
-          <div className="text-center">
-            <div className="text-4xl font-bold mb-1">2-4</div>
-            <div className="text-xs  text-nosk-grey">Per Team</div>
-          </div>
-  
-         
-          <div className="text-center">
-            <div className="text-4xl font-bold mb-1">
 
+        <div className="text-center">
+          <div className="text-4xl sm:text-5xl md:text-6xl font-extrabold mb-2">
             {count >= 100 ? '100+' : count}
-            </div>
-            <div className="text-xs text-nosk-grey">Total Participants</div>
           </div>
-  
-        
-          <div className="text-center">
-            <div className="text-4xl font-bold mb-1">25+</div>
-            <div className="text-xs text-nosk-grey">Total Teams</div>
-          </div>
+          <div className="text-xs sm:text-sm md:text-base text-nosk-grey">Total Participants</div>
+        </div>
+
+        <div className="text-center">
+          <div className="text-4xl sm:text-5xl md:text-6xl font-extrabold mb-2">25+</div>
+          <div className="text-xs sm:text-sm md:text-base text-nosk-grey">Total Teams</div>
         </div>
       </div>
-    );
-  };
-  
-  export default Participants;
+    </div>
+  );
+};
+
+export default Participants;

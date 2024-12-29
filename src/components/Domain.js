@@ -17,32 +17,48 @@ const Domain = () => {
   ];
 
   return (
-    <div className="flex flex-col items-center space-y-5">
-      <div className="w-full">
-        <Section title="Theme" />
-      </div>
-      <div className="w-full md:w-1/2">
-        <div className="flex flex-wrap md:flex-nowrap space-x-2 bg-black p-4 h-[300px]">
-          {sections.map((section) => (
-            <div
-              key={section.id}
-              className={`relative h-full rounded-lg overflow-hidden transition-all duration-500 ease-in-out ${
-                activeSection === section.id ? "flex-[4]" : "flex-[0.7]"
-              }`}
-              onClick={() =>
-                setActiveSection(
-                  activeSection === section.id ? null : section.id
-                )
-              }
-              style={{
-                backgroundImage: `url(${section.image})`,
-                backgroundSize: "cover",
-                backgroundPosition: "center",
-              }}
-            >
+    <div className="flex flex-col items-center space-y-5 my-8">
+    <div className="w-full md:w-1/2">
+      <div className="flex flex-wrap md:flex-nowrap space-x-2 p-4 h-[500px]">
+        {sections.map((section) => (
+          <div
+            key={section.id}
+            className={`relative h-full rounded-3xl overflow-hidden transition-all duration-700 ease-in-out ${
+              activeSection === section.id ? "flex-[4]" : "flex-[0.7]"
+            }`}
+            onClick={() =>
+              setActiveSection(
+                activeSection === section.id ? null : section.id
+              )
+            }
+            style={{
+              backgroundImage: `url(${section.image})`,
+              backgroundSize: "cover",
+              backgroundPosition: "center",
+            }}
+          >
+            {/* Number on Unexpanded Div */}
+            {activeSection !== section.id && (
+              <div className="absolute bottom-4 left-2">
+                <span
+                  className="flex items-center justify-center font-bold"
+                  style={{
+                    borderRadius: "50%",
+                    border: "2px solid white",
+                    color: "white",
+                    width: "2rem",
+                    height: "2rem",
+                    lineHeight: "2rem",
+                    textAlign: "center",
+                  }}
+                >
+                  {section.id}
+                </span>
+              </div>
+            )}
               {/* Expandable Content */}
               {activeSection === section.id && (
-                <div className="absolute bottom-0 left-0 right-0 p-4 bg-nosk-white bg-opacity-30 backdrop-blur-md text-white text-sm md:text-base flex items-center transition-all duration-500">
+                <div className="absolute bottom-0 left-0 right-0 p-4 bg-nosk-white bg-opacity-30 backdrop-blur-md text-white text-sm md:text-base flex items-center transition-all duration-1000">
                   {/* Number and Title */}
                   <span
                     className="flex items-center justify-center font-bold"
@@ -59,7 +75,9 @@ const Domain = () => {
                   >
                     {section.id}
                   </span>
-                  <span className="font-medium text-nosk-white">{section.title}</span>
+                  <span className="font-medium text-nosk-white text-lg md:text-xl">
+                    {section.title}
+                  </span>
                 </div>
               )}
             </div>
