@@ -5,7 +5,10 @@ const Faq = ({ question, answer }) => {
   const [isExpanded, setIsExpanded] = useState(false);
 
   return (
-    <div className="w-full max-w-2xl mx-auto my-4 rounded-lg overflow-hidden border border-gray-200 hover:border-gray-300 transition-all duration-200 relative" onClick={() => setIsExpanded(!isExpanded)}>
+    <div
+      className="w-full max-w-4xl mx-auto my-4 rounded-lg overflow-hidden border border-gray-200 hover:border-gray-300 transition-all duration-200 relative"
+      onClick={() => setIsExpanded(!isExpanded)}
+    >
       <div className="bg-nosk-white transition-shadow drop-shadow-2xl hover:border-2 border-nosk-green hover:shadow-lg">
         <div className="absolute left-0 top-0 bottom-0 w-4 bg-nosk-green"></div>
 
@@ -52,19 +55,27 @@ const FaqList = () => {
       />
       <Faq
         question={"What are the themes for NOSKATHON Lite?"}
-        answer={"The themes are: Open Source for Change, AI for Good, and Climate Action through Technology."}
+        answer={
+          "The themes are: Open Source for Change, AI for Good, and Climate Action through Technology."
+        }
       />
       <Faq
         question={"How can we register for NOSKATHON Lite?"}
-        answer={"Participants can register for NOSKATHON Lite through the official event website by submitting a team and project details."}
+        answer={
+          "Participants can register for NOSKATHON Lite through the official event website by submitting a team and project details."
+        }
       />
       <Faq
         question={"What is the duration of NOSKATHON Lite?"}
-        answer={"NOSKATHON Lite will take place over a span of 48 hours, starting from the opening session."}
+        answer={
+          "NOSKATHON Lite will take place over a span of 48 hours, starting from the opening session."
+        }
       />
       <Faq
         question={"What tools can we use during NOSKATHON Lite?"}
-        answer={"Participants are encouraged to use any open-source tools, frameworks, and platforms to work on their projects."}
+        answer={
+          "Participants are encouraged to use any open-source tools, frameworks, and platforms to work on their projects."
+        }
       />
     </div>
   );

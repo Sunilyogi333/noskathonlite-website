@@ -28,10 +28,12 @@ export default function Home() {
         <Domain />
 
         <Section title="FAQs" />
-        <Faq
-          question={"which is the Best team from OC??"}
-          answer={"Tech Team"}
-        />
+        <div className="mx-8">
+          <Faq
+            question={"which is the Best team from OC??"}
+            answer={"Tech Team"}
+          />
+        </div>
 
         <Section title="OUR TEAM" />
         <TeamSection />
