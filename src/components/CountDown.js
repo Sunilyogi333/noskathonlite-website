@@ -51,7 +51,7 @@ const CountDown = () => {
       />
 
       <div className="flex flex-col items-center lg:flex-row gap-0 lg:gap-10 space-y-2 md:space-y-3">
-        <p className="text-base text-nosk-white md:text-lg font-semibold text-center">
+        <p className="text-base text-nosk-white md:text-4xl font-semibold text-center">
           LIVE IN:
         </p>
         <div className="flex flex-wrap space-x-2 md:space-x-3 text-2xl md:text-3xl md:pt-3 md:pb-2">

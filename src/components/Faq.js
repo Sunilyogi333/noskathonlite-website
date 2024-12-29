@@ -43,4 +43,30 @@ const Faq = ({ question, answer }) => {
   );
 };
 
-export default Faq;
+const FaqList = () => {
+  return (
+    <div>
+      <Faq
+        question={"What are the team requirements for NOSKATHON Lite?"}
+        answer={"Teams can consist of 2 to 4 members."}
+      />
+      <Faq
+        question={"What are the themes for NOSKATHON Lite?"}
+        answer={"The themes are: Open Source for Change, AI for Good, and Climate Action through Technology."}
+      />
+      <Faq
+        question={"How can we register for NOSKATHON Lite?"}
+        answer={"Participants can register for NOSKATHON Lite through the official event website by submitting a team and project details."}
+      />
+      <Faq
+        question={"What is the duration of NOSKATHON Lite?"}
+        answer={"NOSKATHON Lite will take place over a span of 48 hours, starting from the opening session."}
+      />
+      <Faq
+        question={"What tools can we use during NOSKATHON Lite?"}
+        answer={"Participants are encouraged to use any open-source tools, frameworks, and platforms to work on their projects."}
+      />
+    </div>
+  );
+};
+export default FaqList;
