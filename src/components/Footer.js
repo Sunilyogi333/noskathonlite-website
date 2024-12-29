@@ -26,7 +26,7 @@ const Footer = () => {
             alt="Zagged Line"
             width={1920}
             height={120}
-            className="object-cover"
+            className="object-cover w-full"
           />
         </div>
         <div className="flex flex-col text-nosk-white w-full font-semibold text-center relative bg-nosk-green">
