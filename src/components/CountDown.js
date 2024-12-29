@@ -65,7 +65,7 @@ const CountDown = () => {
             </p>
           </div>
           <div className="text-center">
-            <p className="font-bold text-3xl m-0 leading-none text-nosk-white">
+            <p className="font-bold text-3xl m-0 leading-none  md:text-4xl text-nosk-white">
               {timeLeft.hours}
               <span className="hidden md:inline-block">:</span>
             </p>
@@ -74,7 +74,7 @@ const CountDown = () => {
             </p>
           </div>
           <div className="text-center">
-            <p className="font-bold text-3xl m-0 leading-none text-nosk-white">
+            <p className="font-bold text-3xl m-0 leading-none  md:text-4xl text-nosk-white">
               {timeLeft.minutes}
               <span className="hidden md:inline-block">:</span>
             </p>
@@ -83,7 +83,7 @@ const CountDown = () => {
             </p>
           </div>
           <div className="text-center">
-            <p className="font-bold text-3xl m-0 leading-none text-nosk-white">
+            <p className="font-bold text-3xl m-0 leading-none  md:text-4xl text-nosk-white">
               {timeLeft.seconds}
             </p>
             <p className="md:hidden text-[0.5rem] text-nosk-white opacity-50 m-1 leading-none">
