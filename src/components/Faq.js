@@ -6,7 +6,7 @@ const Faq = ({ question, answer }) => {
 
   return (
     <div
-      className="w-full max-w-4xl mx-auto my-4 rounded-lg overflow-hidden border border-nosk-grey transition-all duration-200 relative cursor-pointer"
+      className="w-full max-w-4xl mx-auto my-4 rounded-lg overflow-hidden border border-nosk-green transition-all duration-200 relative cursor-pointer"
       onClick={() => setIsExpanded(!isExpanded)}
     >
       <div className="bg-nosk-white transition-shadow duration-300 hover:shadow-lg">
@@ -35,7 +35,7 @@ const Faq = ({ question, answer }) => {
 
         <div
           className={`overflow-hidden transition-all duration-500 ease-in-out ${
-            isExpanded ? "md:max-h-12 max-h-24" : "max-h-0"
+            isExpanded ? "md:max-h-12 max-h-20" : "max-h-0"
           }`}
           style={{ transitionProperty: "max-height" }}
         >
