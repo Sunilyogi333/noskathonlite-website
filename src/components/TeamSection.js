@@ -155,7 +155,7 @@ export default function TeamSection() {
                 <h5 className="font-bold text-nosk-green mb-1">
                   {member.name}
                 </h5>
-                <p className="text-sm md:text-xl font-semibold text-nosk-white mb-4">
+                <p className="text-sm md:text-xl font-semibold text-nosk-grey mb-4">
                   {member.role}
                 </p>
                 <div className="flex space-x-4">
@@ -214,7 +214,7 @@ export default function TeamSection() {
             <h5 className="font-bold text-center text-nosk-green mb-1">
               {member.name}
             </h5>
-            <p className="text-sm md:text-xl font-semibold text-nosk-white mb-4">
+            <p className="text-sm md:text-xl font-semibold text-nosk-grey mb-4">
               {member.role}
             </p>
             <div className="flex space-x-4">
