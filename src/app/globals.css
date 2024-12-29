@@ -14,11 +14,11 @@ body {
   overflow-x: hidden; /* Prevent horizontal scrollbars */
 
   /* background-color:; */
-  background-image: url("/assets/svg/BG-GRID2.svg");
+  /* background-image: url("/assets/svg/BG GRID - 2.svg");
   background-size: cover;
   background-position: center center;
   background-repeat: no-repeat;
-  min-height: 100vh;
+  min-height: 100vh; */
   /* background-color: black */
 }
 ::-webkit-scrollbar {
@@ -57,5 +57,19 @@ body {
   }
   p {
     @apply text-base md:text-lg text-nosk-grey;
+  }
+}
+
+@layer components {
+  .bg-grid {
+    background-color: #f4f4f5;
+    background-image: linear-gradient(
+        90deg,
+        rgba(0, 0, 0, 0.1) 1px,
+        transparent 1px
+      ),
+      linear-gradient(180deg, rgba(0, 0, 0, 0.1) 1px, transparent 1px);
+
+    background-size: 50px 50px;
   }
 }
