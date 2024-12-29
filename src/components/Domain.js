@@ -19,7 +19,7 @@ const Domain = () => {
   return (
     <div className="flex flex-col items-center space-y-5 my-8">
       <div className="w-full md:w-1/2">
-        <div className="flex flex-wrap md:flex-nowrap space-x-2 bg-black p-4 h-[300px]">
+        <div className="flex flex-wrap md:flex-nowrap space-x-2 p-4 h-[500px]">
           {sections.map((section) => (
             <div
               key={section.id}
@@ -56,7 +56,9 @@ const Domain = () => {
                   >
                     {section.id}
                   </span>
-                  <span className="font-medium text-nosk-white">{section.title}</span>
+                  <span className="font-medium text-nosk-white">
+                    {section.title}
+                  </span>
                 </div>
               )}
             </div>

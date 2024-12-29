@@ -60,7 +60,7 @@ const Header = () => {
         </div>
 
         {showDropdown && (
-          <div className="sm:hidden absolute left-0 right-0 mt-2 mx-4 bg-white rounded-lg shadow-xl border border-gray-100 overflow-hidden transform transition-all duration-200 ease-in-out">
+          <div className="sm:hidden absolute z-10 left-0 right-0 mt-2 mx-4 bg-white rounded-lg shadow-xl border border-gray-100 overflow-hidden transform transition-all duration-200 ease-in-out">
             {navItems.map((item, index) => (
               <button
                 key={item.label}

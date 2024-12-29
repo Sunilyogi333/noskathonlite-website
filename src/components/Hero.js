@@ -21,7 +21,7 @@ const HeroSection = () => {
           <div className="relative flex items-center justify-center">
             <Button
               value="REGISTER NOW"
-              link="/register"
+              link="https://docs.google.com/forms/d/e/1FAIpQLSd4PAg-Tk1kVkIv9a6nWZO9mYsb6p3-G3JxTstzWiduUBlaxQ/viewform"
               className="bg-nosk-green text-nosk-white font-bold text-xl sm:text-2xl md:text-3xl lg:text-4xl lg:font-bold py-4 px-6 relative z-10"
             />
 
