@@ -35,7 +35,7 @@ const Faq = ({ question, answer }) => {
 
         <div
           className={`overflow-hidden transition-all duration-500 ease-in-out ${
-            isExpanded ? "md:max-h-12 max-h-16" : "max-h-0"
+            isExpanded ? "md:max-h-12 max-h-20" : "max-h-0"
           }`}
           style={{ transitionProperty: "max-height" }}
         >
