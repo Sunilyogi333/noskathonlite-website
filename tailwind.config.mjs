@@ -28,6 +28,7 @@ export default {
       colors: {
         "nosk-green": "#1d7d40",
         "nosk-yellow": "#ffb618",
+        "nosk-yellow-trans": "rgba(255, 182, 24,0.75)",
         "nosk-white": "#f4f4f5",
         "nosk-black": "#060709",
         "nosk-grey": "#1e1e1e",

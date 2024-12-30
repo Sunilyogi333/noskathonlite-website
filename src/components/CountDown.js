@@ -47,37 +47,48 @@ const CountDown = () => {
       <img
         src="/assets/png/Wire.png"
         alt="Wire Image"
-        className="absolute top-1  left-[-50px] w-[130px] md:w-[180px] transform scale-x-[-1]"
+        className="absolute top-1 left-[-50px] w-[130px] md:w-[180px] transform scale-x-[-1]"
       />
 
-      <div className="flex flex-col items-center lg:flex-row gap-0 lg:gap-10 space-y-2 md:space-y-3">
+      <div className="flex flex-col items-center md:flex-row gap-0 md:gap-10 space-y-2 md:space-y-3">
         <p className="text-base text-nosk-white md:text-4xl font-semibold text-center">
-          LIVE IN:
+          LIVE IN
         </p>
-        <div className="flex flex-wrap space-x-2 md:space-x-3 text-2xl md:text-3xl md:pt-3 md:pb-2">
+        <div className="flex flex-wrap space-x-2 md:space-x-3 text-2xl md:text-3xl">
           <div className="text-center">
-            <p className="font-bold text-3xl m-0 leading-none text-nosk-white">
+            <p className="font-bold text-3xl m-0 leading-none md:text-4xl text-nosk-white">
               {timeLeft.days}
+              <span className="hidden md:inline-block">:</span>
             </p>
-            <p className="text-[0.5rem] text-nosk-white opacity-50 m-1 leading-none">DAYS</p>
+            <p className="md:hidden text-[0.5rem] text-nosk-white opacity-50 m-1 leading-none">
+              DAYS
+            </p>
           </div>
           <div className="text-center">
-            <p className="font-bold text-3xl m-0 leading-none text-nosk-white">
+            <p className="font-bold text-3xl m-0 leading-none  md:text-4xl text-nosk-white">
               {timeLeft.hours}
+              <span className="hidden md:inline-block">:</span>
             </p>
-            <p className="text-[0.5rem] text-nosk-white opacity-50 m-1 leading-none">HOURS</p>
+            <p className="md:hidden text-[0.5rem] text-nosk-white opacity-50 m-1 leading-none">
+              HOURS
+            </p>
           </div>
           <div className="text-center">
-            <p className="font-bold text-3xl m-0 leading-none text-nosk-white">
+            <p className="font-bold text-3xl m-0 leading-none  md:text-4xl text-nosk-white">
               {timeLeft.minutes}
+              <span className="hidden md:inline-block">:</span>
             </p>
-            <p className="text-[0.5rem] text-nosk-white opacity-50 m-1 leading-none">MINUTES</p>
+            <p className="md:hidden text-[0.5rem] text-nosk-white opacity-50 m-1 leading-none">
+              MINUTES
+            </p>
           </div>
           <div className="text-center">
-            <p className="font-bold text-3xl m-0 leading-none text-nosk-white">
+            <p className="font-bold text-3xl m-0 leading-none  md:text-4xl text-nosk-white">
               {timeLeft.seconds}
             </p>
-            <p className="text-[0.5rem] text-nosk-white opacity-50 m-1 leading-none">SECONDS</p>
+            <p className="md:hidden text-[0.5rem] text-nosk-white opacity-50 m-1 leading-none">
+              SECONDS
+            </p>
           </div>
         </div>
       </div>

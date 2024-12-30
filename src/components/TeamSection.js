@@ -9,17 +9,24 @@ export default function TeamSection() {
       role: 'Team Lead',
       image: '/assets/domain/open_souce.jpg', // Replace with your image path
       socials: {
-        facebook: '#',
-        instagram: '#',
+        facebook: "#",
+        instagram: "#",
         linkedin: '#',
-        twitter: '#',
+        twitter: "#",
       },
+      
     },
     {
-      name: 'Jane Smith',
-      role: 'Lead Designer',
-      image: '/assets/domain/open_souce.jpg',
-      socials: { facebook: '#', instagram: '#', linkedin: '#', twitter: '#' },
+      name: 'Aman Sheikh',
+      role: 'Team Lead',
+      image: '/assets/domain/open_souce.jpg', // Replace with your image path
+      socials: {
+        facebook: "#",
+        instagram: "#",
+        linkedin: '#',
+        twitter: "#",
+      },
+      
     },
   ];
 
