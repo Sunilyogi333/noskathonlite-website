@@ -50,35 +50,35 @@ const CountDown = () => {
         className="absolute top-1 left-[-50px] w-[130px] md:w-[180px] transform scale-x-[-1]"
       />
 
-      <div className="flex flex-col items-center md:flex-row gap-0 md:gap-10 space-y-2 md:space-y-3">
-        <p className="text-base text-nosk-white md:text-4xl font-semibold text-center">
-          LIVE IN
+      <div className="flex flex-col items-center md:justify-between gap-0 md:flex-row md:space-x-10 lg:space-x-14 py-1 md:py-4 xl:py-6">
+        <p className="text-base text-nosk-white md:text-4xl font-extrabold text-center">
+          LIVE IN:
         </p>
         <div className="flex flex-wrap space-x-2 md:space-x-3 text-2xl md:text-3xl">
           <div className="text-center">
             <p className="font-bold text-3xl m-0 leading-none md:text-4xl text-nosk-white">
               {timeLeft.days}
-              <span className="hidden md:inline-block">:</span>
+              {/* <span className="hidden md:inline-block">:</span> */}
             </p>
-            <p className="md:hidden text-[0.5rem] text-nosk-white opacity-50 m-1 leading-none">
+            <p className="text-[0.5rem] text-nosk-white opacity-50 m-1 leading-none">
               DAYS
             </p>
           </div>
           <div className="text-center">
-            <p className="font-bold text-3xl m-0 leading-none  md:text-4xl text-nosk-white">
+            <p className="font-bold text-3xl m-0 leading-none md:text-4xl text-nosk-white">
               {timeLeft.hours}
-              <span className="hidden md:inline-block">:</span>
+              {/* <span className="hidden md:inline-block">:</span> */}
             </p>
-            <p className="md:hidden text-[0.5rem] text-nosk-white opacity-50 m-1 leading-none">
+            <p className="text-[0.5rem] text-nosk-white opacity-50 m-1 leading-none">
               HOURS
             </p>
           </div>
           <div className="text-center">
             <p className="font-bold text-3xl m-0 leading-none  md:text-4xl text-nosk-white">
               {timeLeft.minutes}
-              <span className="hidden md:inline-block">:</span>
+              {/* <span className="hidden md:inline-block">:</span> */}
             </p>
-            <p className="md:hidden text-[0.5rem] text-nosk-white opacity-50 m-1 leading-none">
+            <p className="text-[0.5rem] text-nosk-white opacity-50 m-1 leading-none">
               MINUTES
             </p>
           </div>
@@ -86,7 +86,7 @@ const CountDown = () => {
             <p className="font-bold text-3xl m-0 leading-none  md:text-4xl text-nosk-white">
               {timeLeft.seconds}
             </p>
-            <p className="md:hidden text-[0.5rem] text-nosk-white opacity-50 m-1 leading-none">
+            <p className="text-[0.5rem] text-nosk-white opacity-50 m-1 leading-none">
               SECONDS
             </p>
           </div>
