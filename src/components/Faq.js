@@ -6,16 +6,16 @@ const Faq = ({ question, answer }) => {
 
   return (
     <div
-      className="w-full max-w-4xl mx-auto my-4 rounded-lg overflow-hidden border border-nosk-green transition-all duration-200 relative cursor-pointer"
+      className="w-full max-w-4xl mx-auto my-4 rounded-lg overflow-hidden border hover:border-nosk-green shadow-md transition-all duration-200 relative cursor-pointer"
       onClick={() => setIsExpanded(!isExpanded)}
     >
       <div className="bg-nosk-white transition-shadow duration-300 hover:shadow-lg">
         <div className="absolute left-0 top-0 bottom-0 w-4 bg-nosk-green"></div>
 
         <div className="flex justify-between items-center p-6 relative">
-          <h2 className="text-xl font-semibold text-nosk-black text-left ml-6 md:text-xl md:mr-32">
+          <h4 className="font-semibold text-nosk-black text-left ml-6 md:text-xl md:mr-32">
             {question}
-          </h2>
+          </h4>
 
           <img
             src="assets/svg/Wire - Variant 2.svg"
@@ -24,9 +24,10 @@ const Faq = ({ question, answer }) => {
           />
 
           <button
-            onClick={(e) =>{
+            onClick={(e) => {
               e.stopPropagation();
-             setIsExpanded(!isExpanded)}}
+              setIsExpanded(!isExpanded);
+            }}
             className="text-nosk-green text-2xl font-bold transition-max-height md:text-3xl"
           >
             {isExpanded ? "-" : "+"}
@@ -40,7 +41,7 @@ const Faq = ({ question, answer }) => {
           style={{ transitionProperty: "max-height" }}
         >
           <div className="px-8 pb-6 ml-4 md:ml-0 text-nosk-black md:px-12 md:pb-8">
-            {answer}
+            <p>{answer}</p>
           </div>
         </div>
       </div>
@@ -50,14 +51,25 @@ const Faq = ({ question, answer }) => {
 
 const FaqList = () => {
   return (
-<div>
-  <Faq question="Team size for NOSKATHON Lite?" answer="2-4 members." />
-  <Faq question="NOSKATHON Lite themes?" answer="Open Source for Change, AI for Good, Climate Action through Tech." />
-  <Faq question="How to register?" answer="Register via the official website with team and project details." />
-  <Faq question="NOSKATHON Lite duration?" answer="48 hours, starting from the opening session." />
-  <Faq question="Allowed tools?" answer="Any open-source tools, frameworks, and platforms." />
-</div>
-
+    <div>
+      <Faq question="Team size for NOSKATHON Lite?" answer="2-4 members." />
+      <Faq
+        question="NOSKATHON Lite themes?"
+        answer="Open Source for Change, AI for Good, Climate Action through Tech."
+      />
+      <Faq
+        question="How to register?"
+        answer="Register via the official website with team and project details."
+      />
+      <Faq
+        question="NOSKATHON Lite duration?"
+        answer="48 hours, starting from the opening session."
+      />
+      <Faq
+        question="Allowed tools?"
+        answer="Any open-source tools, frameworks, and platforms."
+      />
+    </div>
   );
 };
 export default FaqList;

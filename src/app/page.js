@@ -26,16 +26,17 @@ export default function Home() {
         <About />
 
         <Section title="FAQs" />
-        <Faq
-          question={"which is the Best team from OC??"}
-          answer={"Tech Team"}
-        />
+        <div className="px-4">
+          <Faq
+            question={"which is the Best team from OC??"}
+            answer={"Tech Team"}
+          />
+        </div>
         <Section title="OUR DOMAIN" />
-<Domain/>
+        <Domain />
         <Section title="OUR TEAM" />
-        
-        <TeamSection />
 
+        <TeamSection />
 
         <Footer />
       </div>
