@@ -1,4 +1,6 @@
 "use client";
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faFacebookF, faInstagram, faLinkedinIn, faTwitter } from '@fortawesome/free-brands-svg-icons';
 
 import Image from "next/image";
 const footerItems = [
@@ -67,48 +69,44 @@ const Footer = () => {
                 href="https://www.facebook.com/nosklub/"
                 target="_blank"
                 rel="noopener noreferrer"
+                className="transition-transform hover:scale-110"
               >
-                <img
-                  src="https://cdn-icons-png.flaticon.com/128/21/21155.png"
-                  width={20}
-                  height={20}
-                  alt="Nosk Facebook"
+                <FontAwesomeIcon 
+                  icon={faFacebookF} 
+                  className="w-5 h-5 sm:w-6 sm:h-6 md:w-7 md:h-7 lg:w-8 lg:h-8 text-nosk-green hover:text-nosk-green"
                 />
               </a>
               <a
                 href="https://www.instagram.com/officialnosk/"
                 target="_blank"
                 rel="noopener noreferrer"
+                className="transition-transform hover:scale-110"
               >
-                <img
-                  src="https://cdn-icons-png.flaticon.com/128/1077/1077042.png"
-                  width={20}
-                  height={20}
-                  alt="Nosk Instagram"
+                <FontAwesomeIcon 
+                  icon={faInstagram} 
+                  className="w-5 h-5 sm:w-6 sm:h-6 md:w-7 md:h-7 lg:w-8 lg:h-8 text-nosk-green hover:text-nosk-green"
                 />
               </a>
               <a
                 href="https://www.linkedin.com/company/officialnosk"
                 target="_blank"
                 rel="noopener noreferrer"
+                className="transition-transform hover:scale-110"
               >
-                <img
-                  src="https://cdn-icons-png.flaticon.com/128/1384/1384088.png"
-                  width={20}
-                  height={20}
-                  alt="Nosk LinkedIn"
+                <FontAwesomeIcon 
+                  icon={faLinkedinIn} 
+                  className="w-5 h-5 sm:w-6 sm:h-6 md:w-7 md:h-7 lg:w-8 lg:h-8 text-nosk-green hover:text-nosk-green"
                 />
               </a>
               <a
                 href="https://x.com/OfficialNosk"
                 target="_blank"
                 rel="noopener noreferrer"
+                className="transition-transform hover:scale-110"
               >
-                <img
-                  src="https://cdn-icons-png.flaticon.com/128/5968/5968958.png"
-                  width={20}
-                  height={20}
-                  alt="Nosk X"
+                <FontAwesomeIcon 
+                  icon={faTwitter} 
+                  className="w-5 h-5 sm:w-6 sm:h-6 md:w-7 md:h-7 lg:w-8 lg:h-8 text-nosk-green hover:text-nosk-green"
                 />
               </a>
             </div>
