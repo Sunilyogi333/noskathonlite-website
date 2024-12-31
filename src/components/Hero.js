@@ -15,7 +15,7 @@ const HeroSection = () => {
 
           <h1 className="mb-6 text-nosk-black font-light text-center">2025</h1>
           <h5 className="text-center text-nosk-green font-bold mb-8">
-            10<sup>th</sup> January, 2025 - 11<sup>th</sup> January, 2025
+            12<sup>th</sup> January, 2025 - 13<sup>th</sup> January, 2025
           </h5>
 
           <div className="relative flex items-center justify-center">
