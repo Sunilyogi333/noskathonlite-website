@@ -6,7 +6,7 @@ const Faq = ({ question, answer }) => {
 
   return (
     <div
-      className="w-full max-w-4xl mx-auto my-4 rounded-lg overflow-hidden border hover:border-nosk-green shadow-md transition-all duration-200 relative cursor-pointer"
+      className="w-full max-w-4xl mx-auto my-6 rounded-lg overflow-hidden border hover:border-nosk-green shadow-md transition-all duration-200 relative cursor-pointer"
       onClick={() => setIsExpanded(!isExpanded)}
     >
       <div className="bg-nosk-white transition-shadow duration-300 hover:shadow-lg">

@@ -9,7 +9,7 @@ const About = () => {
     "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla quam velit, vulputate eu pharetra nec, mattis ac neque. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla quam velit, vulputate eu pharetra nec, mattis ac neque.";
 
   return (
-    <div className="px-8 md:px-10 lg:px-16 mt-14">
+    <div className="px-1 md:px-10 lg:px-16 mt-14">
       <div className="flex flex-wrap justify-center gap-4 w-full lg:px-4">
         {/* First Section */}
         <div className="flex flex-col xl:flex-row gap-2 lg:justify-between lg:px-20 items-center w-full overflow-hidden">

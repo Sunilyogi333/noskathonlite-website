@@ -72,4 +72,8 @@ body {
 
     background-size: 50px 50px;
   }
+  .bg-celeb-banner {
+    background-image: url(https://raw.githubusercontent.com/noskofficial/sfd-resources/refs/heads/sfd-2024/nosk-sfd-2024/assets/celebrationbg/celeb_banner.svg);
+    background-size: cover;
+  }
 }
