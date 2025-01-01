@@ -22,7 +22,7 @@ const Footer = () => {
     <div>
       <footer className="shadow-md w-full relative flex flex-col items-center justify-center">
         {/* Adding the SVG image above the footer */}
-        <div className="w-full">
+        {/* <div className="w-full">
           <Image
             src="/assets/svg/ZaggedLine_G_Y.svg"
             alt="Zagged Line"
@@ -30,7 +30,7 @@ const Footer = () => {
             height={120}
             className="object-cover w-full"
           />
-        </div>
+        </div> */}
         <div className="flex flex-col text-nosk-white w-full font-semibold text-center relative bg-nosk-green">
           <div className="px-8 md:px-10 lg:px-16">
             <div className="flex flex-col lg:flex-row gap-2 justify-center items-center mb-4">

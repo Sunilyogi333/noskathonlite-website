@@ -7,7 +7,6 @@ import Footer from "@/components/Footer";
 import Faq from "@/components/Faq";
 import About from "@/components/About";
 import Section from "@/components/Section";
-import Team from "@/components/Team";
 import Domain from "../components/Domain";
 import TeamSection from "../components/TeamSection";
 export default function Home() {

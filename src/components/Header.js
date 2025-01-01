@@ -20,8 +20,8 @@ const Header = () => {
   };
 
   return (
-    <header className="bg-nosk-green shadow-md fixed w-full top-0 z-50">
-      <nav className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <header className="bg-transparent shadow-md fixed w-full top-0 z-50">
+      <nav className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <div className="flex items-center justify-between h-20">
           <div className="flex-shrink-0 sm:absolute sm:left-3 sm:top-[10px] sm:mx-0 mx-auto w-14 h-14 bg-nosk-white rounded-full flex items-center justify-center overflow-hidden">
             <Image
@@ -60,7 +60,7 @@ const Header = () => {
         </div>
 
         {showDropdown && (
-          <div className="sm:hidden absolute z-10 left-0 right-0 mt-2 mx-4 bg-white rounded-lg shadow-xl border border-gray-100 overflow-hidden transform transition-all duration-200 ease-in-out">
+          <div className="sm:hidden absolute z-20 left-0 right-0 mt-2 mx-4 bg-white rounded-lg shadow-xl border border-gray-100 overflow-hidden transform transition-all duration-200 ease-in-out">
             {navItems.map((item, index) => (
               <button
                 key={item.label}
@@ -68,8 +68,7 @@ const Header = () => {
                   scrollToSection(item.id);
                   setShowDropdown(false);
                 }}
-                className="block w-full text-left text-gray-700 hover:bg-green-50 px-6 py-3 text-base font-medium transition-colors duration-150
-                  "
+                className="block w-full text-left text-gray-700 hover:bg-green-50 px-6 py-3 text-base font-medium transition-colors duration-150"
               >
                 {item.label}
               </button>
@@ -77,14 +76,14 @@ const Header = () => {
           </div>
         )}
       </nav>
-      {/* Adding the SVG image below the header */}
-      <div className="absolute w-full">
+      {/* Adding the SVG image in the background of the header */}
+      <div className="absolute w-full top-0 h-[170px] -z-10">
         <Image
-          src="/assets/svg/ZaggedLineG.svg"
+          src="/assets/svg/navbar.svg"
           alt="Zagged Line"
-          width={440}
-          height={28}
-          className="h-full w-full m-auto"
+          layout="fill"
+          objectFit="cover"
+          className="w-full h-full"
         />
       </div>
     </header>

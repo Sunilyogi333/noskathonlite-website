@@ -1,8 +1,9 @@
 /** @type {import('next').NextConfig} */
+const isProd = process.env.NODE_ENV === "production";
 const nextConfig = {
-  output: "export", // Enables static export mode
-  basePath: "/noskathonlite-website", // Replace <repository-name> with the GitHub repo name
-  assetPrefix: "/noskathonlite-website", // Prefix for static assets
+  // Use the CDN in production and localhost for development.
+  assetPrefix: isProd ? "/noskathonlite-website" : "",
+  basePath: isProd ? "/noskathonlite-website" : "",
 };
 
 export default nextConfig;
