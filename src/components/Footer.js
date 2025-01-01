@@ -36,8 +36,8 @@ const Footer = () => {
             className="object-cover w-full"
           />
         </div> */}
-        <section class="my-7 flex h-80 w-full items-center justify-center bg-celeb-banner bg-no-repeat">
-          <p class="text-center text-3xl md:text-5xl font-bold text-white px-4">
+        <section className="my-7 flex h-80 w-full items-center justify-center bg-celeb-banner bg-no-repeat">
+          <p className="text-center text-3xl md:text-5xl font-bold text-white px-4">
             Opening minds through OPEN SOURCE
           </p>
         </section>

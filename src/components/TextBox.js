@@ -4,7 +4,7 @@ import Image from "next/image";
 
 const TextBox = ({ title, content, bgcolor }) => {
   return (
-    <div className="max-w-lg mx-4 my-6 relative">
+    <div className="max-w-2xl mx-4 my-6 relative">
       <div
         className={`${bgcolor} text-nosk-white rounded-3xl p-8 flex flex-col space-y-4`}
       >

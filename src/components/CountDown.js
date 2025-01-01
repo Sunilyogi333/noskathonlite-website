@@ -12,7 +12,7 @@ const CountDown = () => {
   });
 
   const calculateTime = () => {
-    const targetDate = new Date("2025-01-11T00:00:00");
+    const targetDate = new Date("2025-01-12T00:00:00");
     const diff = targetDate - new Date();
 
     if (diff < 0) {
