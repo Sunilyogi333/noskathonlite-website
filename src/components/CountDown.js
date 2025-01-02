@@ -50,7 +50,7 @@ const CountDown = () => {
         className="absolute top-1 left-[-50px] w-[130px] md:w-[180px] transform scale-x-[-1]"
       />
 
-      <div className="flex flex-col items-center md:justify-between gap-0 md:flex-row md:space-x-10 lg:space-x-14 py-1 md:py-4 xl:py-6">
+      <div className="flex flex-col items-center md:justify-between gap-0 md:flex-row md:space-x-10 lg:space-x-14 py-1 md:py-2 xl:py-3">
         <p className="text-base text-nosk-white md:text-4xl font-extrabold text-center">
           LIVE IN:
         </p>
