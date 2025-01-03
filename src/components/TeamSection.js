@@ -12,7 +12,7 @@ export default function TeamSection() {
     {
       name: "Anuroj Baskota",
       role: "Event Lead",
-      image: "/assets/domain/open_souce.jpg",
+      image: "/assets/team/anuroj.jpg",
       socials: {
         facebook: "#",
         instagram: "https://www.instagram.com/anuroj.baskota/",
@@ -23,7 +23,7 @@ export default function TeamSection() {
     {
       name: "Nabin Paudel",
       role: "Event Lead",
-      image: "/assets/domain/open_souce.jpg",
+      image: "/assets/team/nabin.jpg",
       socials: {
         facebook: "#",
         instagram: "https://www.instagram.com/nabin_paudel24/",
@@ -34,7 +34,7 @@ export default function TeamSection() {
     {
       name: "Rishav Chapagain",
       role: "Program Manager",
-      image: "/assets/domain/open_souce.jpg",
+      image: "/assets/team/rishav.jpg",
       socials: {
         facebook: "#",
         instagram: "https://www.instagram.com/rishavosaurus/",
@@ -48,7 +48,7 @@ export default function TeamSection() {
     {
       name: "Aman Sheikh",
       role: "Tech Lead",
-      image: "/assets/domain/open_souce.jpg",
+      image: "/assets/team/aman.jpg",
       socials: {
         facebook: "#",
         instagram: "https://www.instagram.com/sheikh_a_man/",
@@ -59,7 +59,7 @@ export default function TeamSection() {
     {
       name: "Sujal Bikram Thapa",
       role: "Design Lead",
-      image: "/assets/domain/open_souce.jpg",
+      image: "/assets/team/sujal.jpg",
       socials: {
         facebook: "#",
         instagram: "https://www.instagram.com/sujalbthapa/",
@@ -68,9 +68,20 @@ export default function TeamSection() {
       },
     },
     {
+      name: "Anish Kumar Neupane",
+      role: "Operations Lead",
+      image: "/assets/team/anish.jpg",
+      socials: {
+        facebook: "#",
+        instagram: "https://www.instagram.com/sree_za_nah/",
+        linkedin: "https://www.linkedin.com/in/anishkn04/",
+        twitter: "#",
+      },
+    },
+    {
       name: "Prashubha Pathak",
       role: "Public Relations Lead",
-      image: "/assets/domain/open_souce.jpg",
+      image: "/assets/team/prashubha.jpg",
       socials: {
         facebook: "#",
         instagram:
@@ -83,7 +94,7 @@ export default function TeamSection() {
     {
       name: "Aaditya Binod Yadav",
       role: "Logistics Lead",
-      image: "/assets/domain/open_souce.jpg",
+      image: "/assets/team/aditya.jpg",
       socials: {
         facebook: "#",
         instagram:
@@ -92,24 +103,14 @@ export default function TeamSection() {
         twitter: "#",
       },
     },
-    {
-      name: "Anish Kumar Neupane",
-      role: "Operations Lead",
-      image: "/assets/domain/open_souce.jpg",
-      socials: {
-        facebook: "#",
-        instagram: "https://www.instagram.com/sree_za_nah/",
-        linkedin: "https://www.linkedin.com/in/anishkn04/",
-        twitter: "#",
-      },
-    },
+   
   ];
 
   const sectionThreeMembers = [
     {
       name: "Aryan Jha",
       role: "Tech Team",
-      image: "/assets/domain/open_souce.jpg",
+      image: "/assets/team/aryan.jpg",
       socials: {
         facebook: "#",
         instagram: "http://www.instagram.com/aryyyyyn/",
@@ -120,7 +121,7 @@ export default function TeamSection() {
     {
       name: "Sunil Nath",
       role: "Tech Team",
-      image: "/assets/domain/open_souce.jpg",
+      image: "/assets/team/sunil.jpg",
       socials: {
         facebook: "#",
         instagram: "https://www.instagram.com/sunilnathyogi_/",
@@ -131,7 +132,7 @@ export default function TeamSection() {
     {
       name: "Sanjib Shah",
       role: "Tech Team",
-      image: "/assets/domain/open_souce.jpg",
+      image: "/assets/team/sanjib.jpg",
       socials: {
         facebook: "#",
         instagram: "https://www.instagram.com/sanjib_jung_shah_thakuri/",
@@ -142,7 +143,7 @@ export default function TeamSection() {
     {
       name: "Dipesh Thapa",
       role: "Design Team",
-      image: "/assets/domain/open_souce.jpg",
+      image: "/assets/team/dipesh.jpg",
       socials: {
         facebook: "#",
         instagram: "https://www.instagram.com/dipesh.thapa.02/",
@@ -153,7 +154,7 @@ export default function TeamSection() {
     {
       name: "Ujashna Dangol",
       role: "Design Team",
-      image: "/assets/domain/open_souce.jpg",
+      image: "/assets/team/ujasna.jpg",
       socials: {
         facebook: "#",
         instagram:
@@ -165,7 +166,7 @@ export default function TeamSection() {
     {
       name: "Sushmita khatri",
       role: "Public Relations Team",
-      image: "/assets/domain/open_souce.jpg",
+      image: "/assets/team/susmita.jpg",
       socials: {
         facebook: "#",
         instagram:
@@ -178,7 +179,7 @@ export default function TeamSection() {
     {
       name: "Madan Belbase",
       role: "Support Squad",
-      image: "/assets/domain/open_souce.jpg",
+      image: "/assets/team/madan.jpg",
       socials: {
         facebook: "#",
         instagram: "https://www.instagram.com/madan_belbase/",
@@ -189,7 +190,7 @@ export default function TeamSection() {
     {
       name: "Siddhant Pokharel",
       role: "Support Squad",
-      image: "/assets/domain/open_souce.jpg",
+      image: "/assets/team/siddhant.jpg",
       socials: {
         facebook: "#",
         instagram:
@@ -202,7 +203,7 @@ export default function TeamSection() {
     {
       name: "Anshu Thapa",
       role: "Support Squad",
-      image: "/assets/domain/open_souce.jpg",
+      image: "/assets/team/anshu.jpg",
       socials: {
         facebook: "#",
         instagram:
@@ -214,7 +215,7 @@ export default function TeamSection() {
     {
       name: "Srijana Lohani",
       role: "Support Squad",
-      image: "/assets/domain/open_souce.jpg",
+      image: "/assets/team/shrijana.jpg",
       socials: {
         facebook: "#",
         instagram: "https://www.instagram.com/sree_za_nah/",
@@ -225,7 +226,7 @@ export default function TeamSection() {
     {
       name: "Ankit Paneru",
       role: "Support Squad",
-      image: "/assets/domain/open_souce.jpg",
+      image: "/assets/team/ankit.jpg",
       socials: {
         facebook: "#",
         instagram:
