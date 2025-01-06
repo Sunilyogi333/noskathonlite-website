@@ -21,6 +21,7 @@ const Header = () => {
 
   return (
     <header className="bg-transparent shadow-md fixed w-full top-0 z-50">
+      
       <nav className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <div className="flex items-center justify-between h-20">
           <div className="flex-shrink-0 sm:absolute sm:left-3 sm:top-[10px] sm:mx-0 mx-auto w-14 h-14 bg-nosk-white rounded-full flex items-center justify-center overflow-hidden">
