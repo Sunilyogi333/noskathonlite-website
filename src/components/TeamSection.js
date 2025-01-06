@@ -14,7 +14,7 @@ export default function TeamSection() {
   {
     name: "Anuroj Baskota",
     role: "Event Lead",
-    image: "/assets/domain/open_souce.jpg",
+    image: "/assets/team/anuroj.jpg",
     socials: {
       facebook: "#",
       instagram: "https://www.instagram.com/anuroj.baskota/",
@@ -25,7 +25,7 @@ export default function TeamSection() {
   {
     name: "Nabin Paudel",
     role: "Event Lead",
-    image: "/assets/domain/open_souce.jpg",
+    image: "/assets/team/nabin.jpg",
     socials: {
       facebook: "#",
       instagram: "https://www.instagram.com/nabin_paudel24/",
@@ -39,7 +39,7 @@ const teamLeadBottom = [
   {
     name: "Rishav Chapagain",
     role: "Program Manager",
-    image: "/assets/domain/open_souce.jpg",
+    image: "/assets/team/rishav.jpg",
     socials: {
       facebook: "#",
       instagram: "https://www.instagram.com/rishavosaurus/",
