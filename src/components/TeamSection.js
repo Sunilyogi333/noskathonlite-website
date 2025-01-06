@@ -53,7 +53,7 @@ const teamLeadBottom = [
     {
       name: "Aman Sheikh",
       role: "Tech Lead",
-      image: "/assets/domain/open_souce.jpg",
+      image: "/assets/team/aman.jpg",
       socials: {
         facebook: "#",
         instagram: "https://www.instagram.com/sheikh_a_man/",
@@ -64,7 +64,7 @@ const teamLeadBottom = [
     {
       name: "Sujal Bikram Thapa",
       role: "Design Lead",
-      image: "/assets/domain/open_souce.jpg",
+      image: "/assets/team/sujal.jpg",
       socials: {
         facebook: "#",
         instagram: "https://www.instagram.com/sujalbthapa/",
@@ -73,9 +73,20 @@ const teamLeadBottom = [
       },
     },
     {
+      name: "Anish Kumar Neupane",
+      role: "Operations Lead",
+      image: "/assets/team/anish.jpg",
+      socials: {
+        facebook: "#",
+        instagram: "https://www.instagram.com/sree_za_nah/",
+        linkedin: "https://www.linkedin.com/in/anishkn04/",
+        twitter: "#",
+      },
+    },
+    {
       name: "Prashubha Pathak",
       role: "Public Relations Lead",
-      image: "/assets/domain/open_souce.jpg",
+      image: "/assets/team/prashubha.jpg",
       socials: {
         facebook: "#",
         instagram:
@@ -88,7 +99,7 @@ const teamLeadBottom = [
     {
       name: "Aaditya Binod Yadav",
       role: "Logistics Lead",
-      image: "/assets/domain/open_souce.jpg",
+      image: "/assets/team/aditya.jpg",
       socials: {
         facebook: "#",
         instagram:
@@ -97,24 +108,14 @@ const teamLeadBottom = [
         twitter: "#",
       },
     },
-    {
-      name: "Anish Kumar Neupane",
-      role: "Operations Lead",
-      image: "/assets/domain/open_souce.jpg",
-      socials: {
-        facebook: "#",
-        instagram: "https://www.instagram.com/sree_za_nah/",
-        linkedin: "https://www.linkedin.com/in/anishkn04/",
-        twitter: "#",
-      },
-    },
+   
   ];
 
   const sectionThreeMembers = [
     {
       name: "Aryan Jha",
       role: "Tech Team",
-      image: "/assets/domain/open_souce.jpg",
+      image: "/assets/team/aryan.jpg",
       socials: {
         facebook: "#",
         instagram: "http://www.instagram.com/aryyyyyn/",
@@ -125,7 +126,7 @@ const teamLeadBottom = [
     {
       name: "Sunil Nath",
       role: "Tech Team",
-      image: "/assets/domain/open_souce.jpg",
+      image: "/assets/team/sunil.jpg",
       socials: {
         facebook: "#",
         instagram: "https://www.instagram.com/sunilnathyogi_/",
@@ -136,7 +137,7 @@ const teamLeadBottom = [
     {
       name: "Sanjib Shah",
       role: "Tech Team",
-      image: "/assets/domain/open_souce.jpg",
+      image: "/assets/team/sanjib.jpg",
       socials: {
         facebook: "#",
         instagram: "https://www.instagram.com/sanjib_jung_shah_thakuri/",
@@ -147,7 +148,7 @@ const teamLeadBottom = [
     {
       name: "Dipesh Thapa",
       role: "Design Team",
-      image: "/assets/domain/open_souce.jpg",
+      image: "/assets/team/dipesh.jpg",
       socials: {
         facebook: "#",
         instagram: "https://www.instagram.com/dipesh.thapa.02/",
@@ -158,7 +159,7 @@ const teamLeadBottom = [
     {
       name: "Ujashna Dangol",
       role: "Design Team",
-      image: "/assets/domain/open_souce.jpg",
+      image: "/assets/team/ujasna.jpg",
       socials: {
         facebook: "#",
         instagram:
@@ -170,7 +171,7 @@ const teamLeadBottom = [
     {
       name: "Sushmita khatri",
       role: "Public Relations Team",
-      image: "/assets/domain/open_souce.jpg",
+      image: "/assets/team/susmita.jpg",
       socials: {
         facebook: "#",
         instagram:
@@ -183,7 +184,7 @@ const teamLeadBottom = [
     {
       name: "Madan Belbase",
       role: "Support Squad",
-      image: "/assets/domain/open_souce.jpg",
+      image: "/assets/team/madan.jpg",
       socials: {
         facebook: "#",
         instagram: "https://www.instagram.com/madan_belbase/",
@@ -194,7 +195,7 @@ const teamLeadBottom = [
     {
       name: "Siddhant Pokharel",
       role: "Support Squad",
-      image: "/assets/domain/open_souce.jpg",
+      image: "/assets/team/siddhant.jpg",
       socials: {
         facebook: "#",
         instagram:
@@ -207,7 +208,7 @@ const teamLeadBottom = [
     {
       name: "Anshu Thapa",
       role: "Support Squad",
-      image: "/assets/domain/open_souce.jpg",
+      image: "/assets/team/anshu.jpg",
       socials: {
         facebook: "#",
         instagram:
@@ -219,7 +220,7 @@ const teamLeadBottom = [
     {
       name: "Srijana Lohani",
       role: "Support Squad",
-      image: "/assets/domain/open_souce.jpg",
+      image: "/assets/team/shrijana.jpg",
       socials: {
         facebook: "#",
         instagram: "https://www.instagram.com/sree_za_nah/",
@@ -230,7 +231,7 @@ const teamLeadBottom = [
     {
       name: "Ankit Paneru",
       role: "Support Squad",
-      image: "/assets/domain/open_souce.jpg",
+      image: "/assets/team/ankit.jpg",
       socials: {
         facebook: "#",
         instagram:

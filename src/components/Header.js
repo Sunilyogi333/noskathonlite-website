@@ -77,16 +77,13 @@ const Header = () => {
           </div>
         )}
       </nav>
-      {/* Adding the SVG image in the background of the header */}
       <div className="absolute w-full top-0 h-[170px] -z-10">
-        <Image
-          src="/assets/svg/navbar2.svg"
-          alt="Zagged Line"
-          layout="fill"
-          objectFit="cover"
-          className="w-full h-full"
-        />
-      </div>
+  <img 
+    src="/assets/svg/navbar2.svg" 
+    alt="Zagged Line" 
+    className="w-full h-full object-cover"
+  />
+</div>
     </header>
   );
 };
