@@ -10,6 +10,7 @@ import About from "@/components/About";
 import Section from "@/components/Section";
 import Domain from "../components/Domain";
 import TeamSection from "../components/TeamSection";
+import Prize from "@/components/Prize";
 
 export default function Home() {
   const [showScrollButton, setShowScrollButton] = useState(false);
@@ -48,6 +49,9 @@ export default function Home() {
 
         <Section title="ABOUT" />
         <About />
+
+        <Section title="PRIZES"/>
+        <Prize/>
 
         <Section title="OUR DOMAIN" />
         <Domain />
