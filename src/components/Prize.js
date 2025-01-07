@@ -53,7 +53,7 @@ const Prize = () => {
         </div>
       </div>
 
-      <p className="text-right text-lg text-nosk-green font-normal">cash prize are exclusive of tax<sup>*</sup></p>
+      <p className="text-right text-lg text-nosk-green font-normal">cash prizes are exclusive of tax<sup>*</sup></p>
 
       {/* <div className="flex items-center justify-center space-x-6 mt-6">
         <img 
