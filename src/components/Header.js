@@ -77,12 +77,12 @@ const Header = () => {
         )}
       </nav>
       <div className="absolute w-full top-0 h-[170px] -z-10">
-  <img 
-    src="/assets/svg/navbar2.svg" 
-    alt="Zagged Line" 
-    className="w-full h-full object-cover"
-  />
-</div>
+        <img
+          src="assets/png/navbar-new.png"
+          alt="Zagged Line"
+          className="w-full h-full object-cover"
+        />
+      </div>
     </header>
   );
 };
