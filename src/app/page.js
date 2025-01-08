@@ -10,6 +10,7 @@ import About from "@/components/About";
 import Section from "@/components/Section";
 import Domain from "../components/Domain";
 import TeamSection from "../components/TeamSection";
+import Prize from "@/components/Prize";
 
 export default function Home() {
   const [showScrollButton, setShowScrollButton] = useState(false);
@@ -49,6 +50,11 @@ export default function Home() {
         <Section title="ABOUT" />
         <About />
 
+        <Section title="PRIZES"/>
+        <Prize/>
+
+        <Section title="OUR DOMAIN" />
+        <Domain />
         <Section title="FAQs" />
         <div className="px-4">
           <Faq
@@ -56,22 +62,16 @@ export default function Home() {
             answer={"Tech Team"}
           />
         </div>
-        <Section title="OUR DOMAIN" />
-        <Domain />
         <Section title="OUR TEAM" />
         <TeamSection />
-        
 
         <Footer />
-        
       </div>
 
       {/* Fixed Countdown */}
       <div className="flex-none">
         <CountDown />
       </div>
-
-      
     </div>
   );
 }

@@ -8,46 +8,46 @@ import {
 } from "@fortawesome/free-brands-svg-icons";
 
 export default function TeamSection() {
- // Team members divided into two groups
+  // Team members divided into two groups
 
- const teamLeadTop = [
-  {
-    name: "Anuroj Baskota",
-    role: "Event Lead",
-    image: "/assets/team/anuroj.jpg",
-    socials: {
-      facebook: "#",
-      instagram: "https://www.instagram.com/anuroj.baskota/",
-      linkedin: "https://www.linkedin.com/in/anuroj-baskota-57bb661b1/",
-      twitter: "#",
+  const teamLeadTop = [
+    {
+      name: "Anuroj Baskota",
+      role: "Event Lead",
+      image: "/assets/team/anuroj.jpg",
+      socials: {
+        facebook: "#",
+        instagram: "https://www.instagram.com/anuroj.baskota/",
+        linkedin: "https://www.linkedin.com/in/anuroj-baskota-57bb661b1/",
+        twitter: "#",
+      },
     },
-  },
-  {
-    name: "Nabin Paudel",
-    role: "Event Lead",
-    image: "/assets/team/nabin.jpg",
-    socials: {
-      facebook: "#",
-      instagram: "https://www.instagram.com/nabin_paudel24/",
-      linkedin: "https://np.linkedin.com/in/nabin-paudel-133902293",
-      twitter: "#",
+    {
+      name: "Nabin Paudel",
+      role: "Event Lead",
+      image: "/assets/team/nabin.jpg",
+      socials: {
+        facebook: "#",
+        instagram: "https://www.instagram.com/nabin_paudel24/",
+        linkedin: "https://np.linkedin.com/in/nabin-paudel-133902293",
+        twitter: "#",
+      },
     },
-  },
-];
+  ];
 
-const teamLeadBottom = [
-  {
-    name: "Rishav Chapagain",
-    role: "Program Manager",
-    image: "/assets/team/rishav.jpg",
-    socials: {
-      facebook: "#",
-      instagram: "https://www.instagram.com/rishavosaurus/",
-      linkedin: "https://www.linkedin.com/in/rishav-chapagain/",
-      twitter: "#",
+  const teamLeadBottom = [
+    {
+      name: "Rishav Chapagain",
+      role: "Program Manager",
+      image: "/assets/team/rishav.jpg",
+      socials: {
+        facebook: "#",
+        instagram: "https://www.instagram.com/rishavosaurus/",
+        linkedin: "https://www.linkedin.com/in/rishav-chapagain/",
+        twitter: "#",
+      },
     },
-  },
-];
+  ];
 
   const sectionTwoMembers = [
     {
@@ -108,7 +108,6 @@ const teamLeadBottom = [
         twitter: "#",
       },
     },
-   
   ];
 
   const sectionThreeMembers = [
@@ -247,132 +246,131 @@ const teamLeadBottom = [
     <div className="py-10 px-4">
       {/* Section 1: Lead */}
       <div className="max-w-4xl mx-auto space-y-6">
-  {/* Top row with two members */}
-  <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
-    {teamLeadTop.map((member, index) => (
-      <div
-        key={index}
-        className="bg-nosk-black rounded-lg shadow-lg p-6 flex items-center border-4 border-transparent hover:shadow-xl hover:border-nosk-green group transition-all"
-      >
-        <div className="relative w-24 h-24 rounded-full border-4 border-green-500 overflow-hidden mr-12 transform group-hover:translate-y-[-5px] transition-transform duration-1000">
-          <Image
-            src={member.image}
-            alt={member.name}
-            fill
-            className="object-cover rounded-full"
-          />
-        </div>
-        <div className="flex flex-col text-center transform group-hover:translate-y-[-5px] transition-transform duration-1000">
-          <h3 className="text-lg font-semibold text-nosk-white">
-            {member.name}
-          </h3>
-          <p className="text-sm text-nosk-white">{member.role}</p>
-          <div className="flex space-x-4 mt-4">
-            {Object.entries(member.socials).map(([platform, link], i) => (
-              <a
-                key={i}
-                href={link}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-nosk-white transform translate-y-4 opacity-0 group-hover:opacity-100 group-hover:translate-y-0 transition-all duration-1000"
-              >
-                <FontAwesomeIcon
-                  icon={
-                    platform === "facebook"
-                      ? faFacebookF
-                      : platform === "instagram"
-                      ? faInstagram
-                      : platform === "linkedin"
-                      ? faLinkedinIn
-                      : faTwitter
-                  }
-                  size="lg"
-                  className={`${
-                    platform === "facebook"
-                      ? "text-blue-600"
-                      : platform === "instagram"
-                      ? "text-pink-500"
-                      : platform === "linkedin"
-                      ? "text-blue-700"
-                      : "text-blue-400"
-                  }`}
+        {/* Top row with two members */}
+        <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
+          {teamLeadTop.map((member, index) => (
+            <div
+              key={index}
+              className="bg-nosk-grey rounded-lg shadow-lg py-6 md:px-10 px-4 flex items-center justify-between gap-4 border-4 border-transparent hover:shadow-xl hover:border-nosk-green group transition-all"
+            >
+              <div className="relative w-28 h-28 rounded-full border-4 border-green-500 overflow-hidden transform group-hover:translate-y-[-10px] transition-transform duration-500">
+                <Image
+                  src={member.image}
+                  alt={member.name}
+                  fill
+                  className="object-cover rounded-full"
                 />
-              </a>
-            ))}
-          </div>
+              </div>
+              <div className="flex flex-col text-center transform translate-y-[10px] group-hover:translate-y-[-10px] transition-transform duration-500">
+                <h3 className="text-lg font-semibold text-nosk-white">
+                  {member.name}
+                </h3>
+                <p className="text-sm text-nosk-white">{member.role}</p>
+                <div className="flex items-center justify-center space-x-4 mt-4">
+                  {Object.entries(member.socials).map(([platform, link], i) => (
+                    <a
+                      key={i}
+                      href={link}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="text-nosk-white transform translate-y-4 opacity-0 group-hover:opacity-100 group-hover:translate-y-0 transition-all duration-500"
+                    >
+                      <FontAwesomeIcon
+                        icon={
+                          platform === "facebook"
+                            ? faFacebookF
+                            : platform === "instagram"
+                            ? faInstagram
+                            : platform === "linkedin"
+                            ? faLinkedinIn
+                            : faTwitter
+                        }
+                        size="lg"
+                        className={`${
+                          platform === "facebook"
+                            ? "text-blue-600"
+                            : platform === "instagram"
+                            ? "text-pink-500"
+                            : platform === "linkedin"
+                            ? "text-blue-700"
+                            : "text-blue-400"
+                        }`}
+                      />
+                    </a>
+                  ))}
+                </div>
+              </div>
+            </div>
+          ))}
+        </div>
+
+        {/* Centered single member */}
+        <div className="flex justify-center">
+          {teamLeadBottom.map((member, index) => (
+            <div
+              key={index}
+              className="bg-nosk-grey rounded-lg shadow-lg py-6 md:px-10 px-4 flex items-center gap-4 border-4 border-transparent hover:shadow-xl hover:border-nosk-green group transition-all"
+            >
+              <div className="relative w-28 h-28 rounded-full border-4 border-green-500 overflow-hidden transform group-hover:translate-y-[-5px] transition-transform duration-500">
+                <Image
+                  src={member.image}
+                  alt={member.name}
+                  fill
+                  className="object-cover rounded-full"
+                />
+              </div>
+              <div className="flex flex-col text-center transform translate-y-[10px] group-hover:translate-y-[-10px] transition-transform duration-500">
+                <h3 className="text-lg font-semibold text-nosk-white">
+                  {member.name}
+                </h3>
+                <p className="text-sm text-nosk-white">{member.role}</p>
+                <div className="flex items-center justify-center space-x-4 mt-4">
+                  {Object.entries(member.socials).map(([platform, link], i) => (
+                    <a
+                      key={i}
+                      href={link}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="text-nosk-white transform translate-y-4 opacity-0 group-hover:opacity-100 group-hover:translate-y-0 transition-all duration-500"
+                    >
+                      <FontAwesomeIcon
+                        icon={
+                          platform === "facebook"
+                            ? faFacebookF
+                            : platform === "instagram"
+                            ? faInstagram
+                            : platform === "linkedin"
+                            ? faLinkedinIn
+                            : faTwitter
+                        }
+                        size="lg"
+                        className={`${
+                          platform === "facebook"
+                            ? "text-blue-600"
+                            : platform === "instagram"
+                            ? "text-pink-500"
+                            : platform === "linkedin"
+                            ? "text-blue-700"
+                            : "text-blue-400"
+                        }`}
+                      />
+                    </a>
+                  ))}
+                </div>
+              </div>
+            </div>
+          ))}
         </div>
       </div>
-    ))}
-  </div>
-
-  {/* Centered single member */}
-  <div className="flex justify-center">
-    {teamLeadBottom.map((member, index) => (
-      <div
-        key={index}
-        className="bg-nosk-black rounded-lg shadow-lg p-6 flex items-center border-4 border-transparent hover:shadow-xl hover:border-nosk-green group transition-all"
-      >
-        <div className="relative w-24 h-24 rounded-full border-4 border-green-500 overflow-hidden mr-12 transform group-hover:translate-y-[-5px] transition-transform duration-1000">
-          <Image
-            src={member.image}
-            alt={member.name}
-            fill
-            className="object-cover rounded-full"
-          />
-        </div>
-        <div className="flex flex-col text-center transform group-hover:translate-y-[-5px] transition-transform duration-1000">
-          <h3 className="text-lg font-semibold text-nosk-white">
-            {member.name}
-          </h3>
-          <p className="text-sm text-nosk-white">{member.role}</p>
-          <div className="flex space-x-4 mt-4">
-            {Object.entries(member.socials).map(([platform, link], i) => (
-              <a
-                key={i}
-                href={link}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-nosk-white transform translate-y-4 opacity-0 group-hover:opacity-100 group-hover:translate-y-0 transition-all duration-1000"
-              >
-                <FontAwesomeIcon
-                  icon={
-                    platform === "facebook"
-                      ? faFacebookF
-                      : platform === "instagram"
-                      ? faInstagram
-                      : platform === "linkedin"
-                      ? faLinkedinIn
-                      : faTwitter
-                  }
-                  size="lg"
-                  className={`${
-                    platform === "facebook"
-                      ? "text-blue-600"
-                      : platform === "instagram"
-                      ? "text-pink-500"
-                      : platform === "linkedin"
-                      ? "text-blue-700"
-                      : "text-blue-400"
-                  }`}
-                />
-              </a>
-            ))}
-          </div>
-        </div>
-      </div>
-    ))}
-  </div>
-</div>
-
 
       {/* Section 2 */}
-      <div className="mt-8 max-w-7xl mx-auto grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8">
+      <div className="mt-8 max-w-7xl mx-auto grid items-stretch grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8">
         {sectionTwoMembers.map((member, index) => (
           <div
             key={index}
-            className="bg-nosk-black rounded-lg shadow-lg p-6 flex items-center border-4 border-transparent hover:shadow-xl hover:border-nosk-green group transition-all"
+            className="bg-nosk-grey rounded-lg shadow-lg py-6 md:px-10 px-4 flex items-center justify-between gap-4  border-4 border-transparent hover:shadow-xl hover:border-nosk-green group transition-all"
           >
-            <div className="relative w-24 h-24 rounded-full border-4 border-green-500 overflow-hidden mr-12 transform group-hover:translate-y-[-5px] transition-transform duration-1000">
+            <div className="relative w-24 h-24 rounded-full border-4 border-green-500 overflow-hidden transform group-hover:translate-y-[-10px] transition-transform duration-500">
               <Image
                 src={member.image}
                 alt={member.name}
@@ -380,19 +378,19 @@ const teamLeadBottom = [
                 className="object-cover rounded-full"
               />
             </div>
-            <div className="flex flex-col text-center transform group-hover:translate-y-[-5px] transition-transform duration-1000">
+            <div className="flex flex-col text-center transform translate-y-[10px] group-hover:translate-y-[-10px] transition-transform duration-500">
               <h3 className="text-lg font-semibold text-nosk-white">
                 {member.name}
               </h3>
               <p className="text-sm text-nosk-white">{member.role}</p>
-              <div className="flex space-x-4 mt-4">
+              <div className="flex items-center justify-center space-x-4 mt-4">
                 {Object.entries(member.socials).map(([platform, link], i) => (
                   <a
                     key={i}
                     href={link}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="text-nosk-white transform translate-y-4 opacity-0 group-hover:opacity-100 group-hover:translate-y-0 transition-all duration-1000"
+                    className="text-nosk-white transform translate-y-4 opacity-0 group-hover:opacity-100 group-hover:translate-y-0 transition-all duration-500"
                   >
                     <FontAwesomeIcon
                       icon={
@@ -428,9 +426,9 @@ const teamLeadBottom = [
         {sectionThreeMembers.slice(0, 10).map((member, index) => (
           <div
             key={index}
-            className="bg-nosk-black rounded-lg shadow-lg p-6 flex flex-col items-center border-4 border-transparent hover:shadow-xl hover:border-nosk-green group transition-all"
+            className="bg-nosk-grey rounded-lg shadow-lg py-6 md:px-10 px-4 flex flex-col items-center border-4 border-transparent hover:shadow-xl hover:border-nosk-green group transition-all"
           >
-            <div className="relative w-24 h-24 rounded-full border-4 border-green-500 overflow-hidden transform group-hover:translate-y-[-5px] transition-transform duration-1000">
+            <div className="relative w-24 h-24 rounded-full border-4 border-green-500 overflow-hidden translate-y-[10px] transform group-hover:translate-y-[-5px] transition-transform duration-500">
               <Image
                 src={member.image}
                 alt={member.name}
@@ -438,19 +436,19 @@ const teamLeadBottom = [
                 className="object-cover rounded-full"
               />
             </div>
-            <div className="flex flex-col text-center transform group-hover:translate-y-[-5px] transition-transform duration-1000">
+            <div className="flex flex-col text-center transform translate-y-[10px] group-hover:translate-y-[-10px] transition-transform duration-500">
               <h3 className="text-lg font-semibold text-nosk-white mt-4">
                 {member.name}
               </h3>
               <p className="text-sm text-nosk-white">{member.role}</p>
-              <div className="flex space-x-4 mt-4">
+              <div className="flex items-center justify-center space-x-4 mt-4">
                 {Object.entries(member.socials).map(([platform, link], i) => (
                   <a
                     key={i}
                     href={link}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="text-nosk-white transform translate-y-4 opacity-0 group-hover:opacity-100 group-hover:translate-y-0 transition-all duration-1000"
+                    className="text-nosk-white transform translate-y-4 opacity-0 group-hover:opacity-100 group-hover:translate-y-0 transition-all duration-500"
                   >
                     <FontAwesomeIcon
                       icon={
