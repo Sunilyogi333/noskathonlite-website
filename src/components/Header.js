@@ -7,9 +7,10 @@ const Header = () => {
   const navItems = [
     { label: "Home", id: "home" },
     { label: "About", id: "about" },
+    { label: "Domain", id: "domain" },
     { label: "Prizes", id: "prizes" },
     { label: "FAQs", id: "faqs" },
-    { label: "Contact Us", id: "contact" },
+    { label: "Team", id: "team" },
   ];
 
   const scrollToSection = (sectionId) => {

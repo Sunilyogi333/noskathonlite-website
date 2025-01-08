@@ -3,7 +3,10 @@ import { Button } from "./Button.js";
 
 const HeroSection = () => {
   return (
-    <div className="h-screen hero-section text-white w-full flex items-center justify-center min-h-screen text-center px-8 md:px-16 lg:px-20 ">
+    <div
+      className="h-screen hero-section text-white w-full flex items-center justify-center min-h-screen text-center px-8 md:px-16 lg:px-20 "
+      id="home"
+    >
       <div className="flex flex-col lg:flex-col xl:flex-row sm:mt-4 lg:gap-20 items-center justify-between max-w-9xl lg:mt-8 w-full">
         <div className="text-center lg:text-left flex-col items-center justify-center">
           <div className="mb-4 gap-2 w-full flex flex-col items-center justify-center lg:flex-row">

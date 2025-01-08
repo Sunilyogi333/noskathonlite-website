@@ -11,8 +11,10 @@ import Image from "next/image";
 const footerItems = [
   { label: "Home", id: "home" },
   { label: "About", id: "about" },
+  { label: "Domain", id: "domain" },
   { label: "Prizes", id: "prizes" },
   { label: "FAQs", id: "faqs" },
+  { label: "Team", id: "team" },
 ];
 
 const scrollToSection = (sectionId) => {
@@ -27,15 +29,7 @@ const Footer = () => {
     <div>
       <footer className="shadow-md w-full relative flex flex-col items-center justify-center">
         {/* Adding the SVG image above the footer */}
-        {/* <div className="w-full">
-          <Image
-            src="/assets/svg/ZaggedLine_G_Y.svg"
-            alt="Zagged Line"
-            width={1920}
-            height={120}
-            className="object-cover w-full"
-          />
-        </div> */}
+
         <section className="my-7 flex h-80 w-full items-center justify-center bg-celeb-banner bg-no-repeat">
           <p className="text-center text-3xl md:text-5xl font-bold text-white px-4">
             Opening minds through OPEN SOURCE
@@ -43,16 +37,10 @@ const Footer = () => {
         </section>
         <div className="flex flex-col text-nosk-white w-full font-semibold text-center relative bg-nosk-green">
           <div className="px-8 md:px-10 lg:px-16">
-            {/* <div className="flex flex-col lg:flex-row gap-2 justify-center items-center mb-4">
-              <h4 className="text-2xl md:text-3xl lg:text-4xl xl:text-5xl 2xl:text-6xl">
-                Opening minds through OPEN SOURCE
-              </h4>
-            </div> */}
-
-            <h4 className="text-nosk-white font-semibold text-center mt-8">
+            <h3 className="text-nosk-white font-bold text-center my-6">
               Links
-            </h4>
-            <div className="flex flex-row justify-center items-center">
+            </h3>
+            <div className="flex flex-row justify-center items-center flex-wrap gap-0 md:gap-6 xl:gap-8">
               {footerItems.map((item) => (
                 <button
                   key={item.label}

@@ -47,22 +47,23 @@ export default function Home() {
       <div className="flex-1 overflow-y-auto mt-38 overflow-hidden">
         <Hero />
 
-        <Section title="ABOUT" />
+        <Section title="ABOUT" id={"about"} />
         <About />
 
-        <Section title="PRIZES"/>
-        <Prize/>
-
-        <Section title="OUR DOMAIN" />
+        <Section title="OUR DOMAIN" id={"domain"} />
         <Domain />
-        <Section title="FAQs" />
+
+        <Section title="PRIZES" id={"prizes"} />
+        <Prize />
+
+        <Section title="FAQs" id={"faqs"} />
         <div className="px-4">
           <Faq
             question={"Which is the best team from OC?"}
             answer={"Tech Team"}
           />
         </div>
-        <Section title="OUR TEAM" />
+        <Section title="OUR TEAM" id={"team"} />
         <TeamSection />
 
         <Footer />
