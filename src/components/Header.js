@@ -83,6 +83,7 @@ const Header = () => {
     className="w-full h-full object-cover"
   />
 </div>
+
     </header>
   );
 };
