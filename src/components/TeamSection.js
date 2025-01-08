@@ -168,15 +168,15 @@ export default function TeamSection() {
       },
     },
     {
-      name: "Sushmita khatri",
+      name: "Dikshant Dahal",
       role: "Public Relations Team",
-      image: "/assets/team/susmita.jpg",
+      image: "/assets/team/dikshant.jpg",
       socials: {
         facebook: "#",
         instagram:
-          "https://www.instagram.com/_sushmita_xo/profilecard/?igsh=MW4ydzU3ZzJkNHE2",
+          "#",
         linkedin:
-          "https://www.linkedin.com/in/sushmita-khatri-7ab226329?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app",
+          "#",
         twitter: "#",
       },
     },
@@ -423,7 +423,7 @@ export default function TeamSection() {
 
       {/* Section 3 */}
       <div className="mt-8 max-w-7xl mx-auto grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
-        {sectionThreeMembers.slice(0, 10).map((member, index) => (
+        {sectionThreeMembers.slice(0, 11).map((member, index) => (
           <div
             key={index}
             className="bg-nosk-grey rounded-lg shadow-lg py-6 md:px-10 px-4 flex flex-col items-center border-4 border-transparent hover:shadow-xl hover:border-nosk-green group transition-all"
