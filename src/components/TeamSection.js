@@ -181,6 +181,19 @@ export default function TeamSection() {
       },
     },
     {
+      name: "Ankit Paneru",
+      role: "Support Squad",
+      image: "/assets/team/ankit.jpg",
+      socials: {
+        facebook: "#",
+        instagram:
+          "https://www.instagram.com/ankitpaneru5/profilecard/?igsh=emU2M2N4MXN2dmYy",
+        linkedin:
+          "https://www.linkedin.com/in/ankit-paneru-ab1364343?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app",
+        twitter: "#",
+      },
+    },
+    {
       name: "Madan Belbase",
       role: "Support Squad",
       image: "/assets/team/madan.jpg",
@@ -227,19 +240,7 @@ export default function TeamSection() {
         twitter: "#",
       },
     },
-    {
-      name: "Ankit Paneru",
-      role: "Support Squad",
-      image: "/assets/team/ankit.jpg",
-      socials: {
-        facebook: "#",
-        instagram:
-          "https://www.instagram.com/ankitpaneru5/profilecard/?igsh=emU2M2N4MXN2dmYy",
-        linkedin:
-          "https://www.linkedin.com/in/ankit-paneru-ab1364343?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app",
-        twitter: "#",
-      },
-    },
+
   ];
 
   return (

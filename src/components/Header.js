@@ -1,11 +1,11 @@
 import React from "react";
 import { useState } from "react";
 import Image from "next/image";
+import Link from "next/link";
 
 const Header = () => {
   const [showDropdown, setShowDropdown] = useState(false);
   const navItems = [
-    { label: "Home", id: "home" },
     { label: "About", id: "about" },
     { label: "Domain", id: "domain" },
     { label: "Prizes", id: "prizes" },
@@ -25,13 +25,16 @@ const Header = () => {
       <nav className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <div className="flex items-center justify-between h-20">
           <div className="flex-shrink-0 sm:absolute sm:left-3 sm:top-[10px] sm:mx-0 mx-auto w-14 h-14 bg-nosk-white rounded-full flex items-center justify-center overflow-hidden">
+            <Link href="/">
             <Image
               src="/assets/svg/NOSK_Logo_with_Tagline 1.svg"
               alt="Nosk Logo"
+              href="/"
               height={318}
               width={318}
               className="object-cover w-full h-full"
             />
+            </Link>
           </div>
 
           <div className="hidden sm:flex flex-grow justify-center space-x-1 md:space-x-3 lg:space-x-6 xl:space-x-10">
