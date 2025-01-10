@@ -11,6 +11,7 @@ const Header = () => {
     { label: "Prizes", id: "prizes" },
     { label: "FAQs", id: "faqs" },
     { label: "Team", id: "team" },
+    { label: "Leaderboards", id: "leaderboards" },
   ];
 
   const scrollToSection = (sectionId) => {
@@ -26,27 +27,42 @@ const Header = () => {
         <div className="flex items-center justify-between h-20">
           <div className="flex-shrink-0 sm:absolute sm:left-3 sm:top-[10px] sm:mx-0 mx-auto w-14 h-14 bg-nosk-white rounded-full flex items-center justify-center overflow-hidden">
             <Link href="/">
-            <Image
-              src="/assets/svg/NOSK_Logo_with_Tagline 1.svg"
-              alt="Nosk Logo"
-              href="/"
-              height={318}
-              width={318}
-              className="object-cover w-full h-full"
-            />
+              <Image
+                src="/assets/svg/NOSK_Logo_with_Tagline 1.svg"
+                alt="Nosk Logo"
+                href="/"
+                height={318}
+                width={318}
+                className="object-cover w-full h-full"
+              />
             </Link>
           </div>
 
           <div className="hidden sm:flex flex-grow justify-center space-x-1 md:space-x-3 lg:space-x-6 xl:space-x-10">
-            {navItems.map((item) => (
-              <button
-                key={item.label}
-                onClick={() => scrollToSection(item.id)}
-                className="text-white hover:text-gray-200 px-3 py-2 text-base sm:text-lg md:text-xl lg:text-2xl font-lar transition-transform hover:scale-110 hover:font-extrabold"
-              >
-                {item.label}
-              </button>
-            ))}
+            {navItems.map((item) => {
+              if (item.label === "Leaderboards") {
+                return (
+                  <Link href="/leaderboards">
+                    <button
+                      key={item.label}
+                      onClick={() => scrollToSection(item.id)}
+                      className="text-white hover:text-gray-200 px-3 py-2 text-base sm:text-lg md:text-xl lg:text-2xl font-lar transition-transform hover:scale-110 hover:font-extrabold"
+                    >
+                      {item.label}
+                    </button>
+                  </Link>
+                );
+              }
+              return (
+                <button
+                  key={item.label}
+                  onClick={() => scrollToSection(item.id)}
+                  className="text-white hover:text-gray-200 px-3 py-2 text-base sm:text-lg md:text-xl lg:text-2xl font-lar transition-transform hover:scale-110 hover:font-extrabold"
+                >
+                  {item.label}
+                </button>
+              );
+            })}
           </div>
 
           <div className="sm:hidden flex items-center">
@@ -65,18 +81,36 @@ const Header = () => {
 
         {showDropdown && (
           <div className="sm:hidden absolute z-20 left-0 right-0 mt-2 mx-4 bg-white rounded-lg shadow-xl border border-gray-100 overflow-hidden transform transition-all duration-200 ease-in-out">
-            {navItems.map((item, index) => (
-              <button
-                key={item.label}
-                onClick={() => {
-                  scrollToSection(item.id);
-                  setShowDropdown(false);
-                }}
-                className="block w-full text-left text-gray-700 hover:bg-green-50 px-6 py-3 text-base font-medium transition-colors duration-150"
-              >
-                {item.label}
-              </button>
-            ))}
+            {navItems.map((item) => {
+              if (item.label === "Leaderboards") {
+                return (
+                  <Link href="/leaderboards" key={item.label}>
+                    <hr class="h-0.5 mx-4 bg-gray-100" />
+                    <button
+                      onClick={() => {
+                        scrollToSection(item.id);
+                        setShowDropdown(false);
+                      }}
+                      className="block w-full text-left text-nosk-black hover:bg-green-50  px-6 py-3 text-base font-medium transition-colors duration-150"
+                    >
+                      {item.label}
+                    </button>
+                  </Link>
+                );
+              }
+              return (
+                <button
+                  key={item.label}
+                  onClick={() => {
+                    scrollToSection(item.id);
+                    setShowDropdown(false);
+                  }}
+                  className="block w-full text-left text-nosk-black hover:bg-green-50 px-6 py-3 text-base font-medium transition-colors duration-150"
+                >
+                  {item.label}
+                </button>
+              );
+            })}
           </div>
         )}
       </nav>
