@@ -38,7 +38,7 @@ export default function ParticipantCommitsPage() {
   return (
     <>
       <Header />
-      <div className="container mx-auto px-4 py-8 mt-32 lg:mt-44">
+      <div id="leaderboards" className="container mx-auto px-4 py-8 mt-32 lg:mt-44">
         <h1 className="font-bold text-center text-nosk-green mb-6">
           Hackathon Leaderboard
         </h1>

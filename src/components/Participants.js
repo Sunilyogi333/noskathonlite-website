@@ -68,7 +68,7 @@ const Participants = () => {
 
         <div className="text-center">
           <div className="text-5xl sm:text-6xl md:text-7xl font-extrabold mb-2">
-            35+
+              50+
           </div>
           <div className="text-xs sm:text-sm md:text-base text-nosk-grey">
             Total Teams
