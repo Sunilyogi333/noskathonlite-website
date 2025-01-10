@@ -78,7 +78,7 @@ export default function TeamSection() {
       image: "/assets/team/anish.jpg",
       socials: {
         facebook: "#",
-        instagram: "https://www.instagram.com/sree_za_nah/",
+        instagram: "https://instagram.com/anishkn04",
         linkedin: "https://www.linkedin.com/in/anishkn04/",
         twitter: "#",
       },
@@ -238,7 +238,6 @@ export default function TeamSection() {
         twitter: "#",
       },
     },
-
   ];
 
   return (
