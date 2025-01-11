@@ -77,10 +77,10 @@ export default function TeamSection() {
       role: "Operations Lead",
       image: "/assets/team/anish.jpg",
       socials: {
-        facebook: "#",
+        facebook: "https://facebook.com/anishkn04",
         instagram: "https://instagram.com/anishkn04",
         linkedin: "https://www.linkedin.com/in/anishkn04/",
-        twitter: "#",
+        twitter: "https://x.com/anishkn04",
       },
     },
     {
@@ -149,7 +149,7 @@ export default function TeamSection() {
       role: "Design Team",
       image: "/assets/team/dipesh.jpg",
       socials: {
-        facebook: "#",
+        facebook: "https://www.facebook.com/profile.php?id=100075327166605",
         instagram: "https://www.instagram.com/dipesh.thapa.02/",
         linkedin: "https://www.linkedin.com/in/dipesh-thapa-811307342/",
         twitter: "#",
@@ -160,7 +160,7 @@ export default function TeamSection() {
       role: "Design Team",
       image: "/assets/team/ujasna.jpg",
       socials: {
-        facebook: "#",
+        facebook: "https://www.facebook.com/ujashna.dangol/",
         instagram:
           "https://www.instagram.com/uj_2004_?igsh=MWc5Y2RlMHNvN2tqcw==",
         linkedin: "https://www.linkedin.com/in/ujashna-dangol-165533311/",
@@ -172,7 +172,7 @@ export default function TeamSection() {
       role: "Public Relations Team",
       image: "/assets/team/dikshant.jpg",
       socials: {
-        facebook: "#",
+        facebook: "https://www.facebook.com/profile.php?id=61561151994814",
         instagram: "#",
         linkedin: "#",
         twitter: "#",
@@ -196,7 +196,7 @@ export default function TeamSection() {
       role: "Support Squad",
       image: "/assets/team/madan.jpg",
       socials: {
-        facebook: "#",
+        facebook: "https://www.facebook.com/profile.php?id=61554181993528",
         instagram: "https://www.instagram.com/madan_belbase/",
         linkedin: "https://www.linkedin.com/in/madan-belbase/",
         twitter: "#",
