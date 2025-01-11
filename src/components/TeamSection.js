@@ -77,10 +77,10 @@ export default function TeamSection() {
       role: "Operations Lead",
       image: "/assets/team/anish.jpg",
       socials: {
-        facebook: "#",
-        instagram: "https://www.instagram.com/sree_za_nah/",
+        facebook: "https://facebook.com/anishkn04",
+        instagram: "https://instagram.com/anishkn04",
         linkedin: "https://www.linkedin.com/in/anishkn04/",
-        twitter: "#",
+        twitter: "https://x.com/anishkn04",
       },
     },
     {
@@ -149,7 +149,7 @@ export default function TeamSection() {
       role: "Design Team",
       image: "/assets/team/dipesh.jpg",
       socials: {
-        facebook: "#",
+        facebook: "https://www.facebook.com/profile.php?id=100075327166605",
         instagram: "https://www.instagram.com/dipesh.thapa.02/",
         linkedin: "https://www.linkedin.com/in/dipesh-thapa-811307342/",
         twitter: "#",
@@ -160,7 +160,7 @@ export default function TeamSection() {
       role: "Design Team",
       image: "/assets/team/ujasna.jpg",
       socials: {
-        facebook: "#",
+        facebook: "https://www.facebook.com/ujashna.dangol/",
         instagram:
           "https://www.instagram.com/uj_2004_?igsh=MWc5Y2RlMHNvN2tqcw==",
         linkedin: "https://www.linkedin.com/in/ujashna-dangol-165533311/",
@@ -172,11 +172,22 @@ export default function TeamSection() {
       role: "Public Relations Team",
       image: "/assets/team/dikshant.jpg",
       socials: {
+        facebook: "https://www.facebook.com/profile.php?id=61561151994814",
+        instagram: "#",
+        linkedin: "#",
+        twitter: "#",
+      },
+    },
+    {
+      name: "Ankit Paneru",
+      role: "Support Squad",
+      image: "/assets/team/ankit.jpg",
+      socials: {
         facebook: "#",
         instagram:
-          "#",
+          "https://www.instagram.com/ankitpaneru5/profilecard/?igsh=emU2M2N4MXN2dmYy",
         linkedin:
-          "#",
+          "https://www.linkedin.com/in/ankit-paneru-ab1364343?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app",
         twitter: "#",
       },
     },
@@ -185,7 +196,7 @@ export default function TeamSection() {
       role: "Support Squad",
       image: "/assets/team/madan.jpg",
       socials: {
-        facebook: "#",
+        facebook: "https://www.facebook.com/profile.php?id=61554181993528",
         instagram: "https://www.instagram.com/madan_belbase/",
         linkedin: "https://www.linkedin.com/in/madan-belbase/",
         twitter: "#",
@@ -227,19 +238,6 @@ export default function TeamSection() {
         twitter: "#",
       },
     },
-    {
-      name: "Ankit Paneru",
-      role: "Support Squad",
-      image: "/assets/team/ankit.jpg",
-      socials: {
-        facebook: "#",
-        instagram:
-          "https://www.instagram.com/ankitpaneru5/profilecard/?igsh=emU2M2N4MXN2dmYy",
-        linkedin:
-          "https://www.linkedin.com/in/ankit-paneru-ab1364343?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app",
-        twitter: "#",
-      },
-    },
   ];
 
   return (
@@ -251,7 +249,7 @@ export default function TeamSection() {
           {teamLeadTop.map((member, index) => (
             <div
               key={index}
-              className="bg-nosk-grey rounded-lg shadow-lg py-6 md:px-10 px-4 flex items-center justify-between gap-4 border-4 border-transparent hover:shadow-xl hover:border-nosk-green group transition-all"
+              className="bg-nosk-grey rounded-lg shadow-lg py-6 md:px-10 px-4 flex items-center justify-around gap-4 border-4 border-transparent hover:shadow-xl hover:border-nosk-green group transition-all"
             >
               <div className="relative w-28 h-28 rounded-full border-4 border-green-500 overflow-hidden transform group-hover:translate-y-[-10px] transition-transform duration-500">
                 <Image
@@ -309,7 +307,7 @@ export default function TeamSection() {
           {teamLeadBottom.map((member, index) => (
             <div
               key={index}
-              className="bg-nosk-grey rounded-lg shadow-lg py-6 md:px-10 px-4 flex items-center gap-4 border-4 border-transparent hover:shadow-xl hover:border-nosk-green group transition-all"
+              className="bg-nosk-grey w-full max-w-lg rounded-lg shadow-lg py-6 md:px-10 px-4 flex items-center justify-around gap-4 border-4 border-transparent hover:shadow-xl hover:border-nosk-green group transition-all"
             >
               <div className="relative w-28 h-28 rounded-full border-4 border-green-500 overflow-hidden transform group-hover:translate-y-[-5px] transition-transform duration-500">
                 <Image
@@ -368,7 +366,7 @@ export default function TeamSection() {
         {sectionTwoMembers.map((member, index) => (
           <div
             key={index}
-            className="bg-nosk-grey rounded-lg shadow-lg py-6 md:px-10 px-4 flex items-center justify-between gap-4  border-4 border-transparent hover:shadow-xl hover:border-nosk-green group transition-all"
+            className="bg-nosk-grey rounded-lg shadow-lg py-6 md:px-10 px-4 flex items-center justify-around gap-4  border-4 border-transparent hover:shadow-xl hover:border-nosk-green group transition-all"
           >
             <div className="relative w-24 h-24 rounded-full border-4 border-green-500 overflow-hidden transform group-hover:translate-y-[-10px] transition-transform duration-500">
               <Image
