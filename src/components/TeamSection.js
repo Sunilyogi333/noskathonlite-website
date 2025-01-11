@@ -41,7 +41,7 @@ export default function TeamSection() {
       role: "Program Manager",
       image: "/assets/team/rishav.jpg",
       socials: {
-        facebook: "#",
+        facebook: "https://www.facebook.com/rishavosaurus/",
         instagram: "https://www.instagram.com/rishavosaurus/",
         linkedin: "https://www.linkedin.com/in/rishav-chapagain/",
         twitter: "#",
@@ -66,7 +66,7 @@ export default function TeamSection() {
       role: "Design Lead",
       image: "/assets/team/sujal.jpg",
       socials: {
-        facebook: "#",
+        facebook: "https://www.facebook.com/sujalbikramthapa",
         instagram: "https://www.instagram.com/sujalbthapa/",
         linkedin: "https://www.linkedin.com/in/sujalbthapa/",
         twitter: "#",
@@ -101,7 +101,7 @@ export default function TeamSection() {
       role: "Logistics Lead",
       image: "/assets/team/aditya.jpg",
       socials: {
-        facebook: "#",
+        facebook: "https://www.facebook.com/aadityabinodyadav108/",
         instagram:
           "https://www.instagram.com/aadityarayyadav?igsh=d2w0aHhwejF5MHJ0",
         linkedin: "https://www.linkedin.com/in/aaditya-binod-yadav-52505a256/",
