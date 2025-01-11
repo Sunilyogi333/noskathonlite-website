@@ -1,3 +1,4 @@
+"use client";
 import React from "react";
 import { useState } from "react";
 import Image from "next/image";
@@ -42,9 +43,8 @@ const Header = () => {
             {navItems.map((item) => {
               if (item.label === "Leaderboards") {
                 return (
-                  <Link href="/leaderboards">
+                  <Link key={item.label} href="/leaderboards">
                     <button
-                      key={item.label}
                       onClick={() => scrollToSection(item.id)}
                       className="text-white hover:text-gray-200 px-3 py-2 text-base sm:text-lg md:text-xl lg:text-2xl font-lar transition-transform hover:scale-110 hover:font-extrabold"
                     >
