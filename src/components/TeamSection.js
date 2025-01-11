@@ -127,7 +127,7 @@ export default function TeamSection() {
       role: "Tech Team",
       image: "/assets/team/sunil.jpg",
       socials: {
-        facebook: "#",
+        facebook: "https://www.facebook.com/sunil.nath.3",
         instagram: "https://www.instagram.com/sunilnathyogi_/",
         linkedin: "http://linkedin.com/in/sunil-nath-162019263",
         twitter: "#",
