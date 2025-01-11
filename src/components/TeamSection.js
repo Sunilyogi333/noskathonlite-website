@@ -27,7 +27,7 @@ export default function TeamSection() {
       role: "Event Lead",
       image: "/assets/team/nabin.jpg",
       socials: {
-        facebook: "#",
+        facebook: "https://www.facebook.com/nabin.paudel.41",
         instagram: "https://www.instagram.com/nabin_paudel24/",
         linkedin: "https://np.linkedin.com/in/nabin-paudel-133902293",
         twitter: "#",
@@ -138,7 +138,7 @@ export default function TeamSection() {
       role: "Tech Team",
       image: "/assets/team/sanjib.jpg",
       socials: {
-        facebook: "#",
+        facebook: "https://www.facebook.com/sandeshjung.shah.5",
         instagram: "https://www.instagram.com/sanjib_jung_shah_thakuri/",
         linkedin: "https://www.linkedin.com/in/sanjib-shah-3361041aa",
         twitter: "#",
