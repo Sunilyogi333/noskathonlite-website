@@ -1,92 +1,100 @@
-import axios from 'axios';
+import axios from "axios";
 
 // GitHub token (secure it in production using environment variables or secrets)
-const TOKEN = process.env.GITHUB_TOKEN; 
+const TOKEN = process.env.GITHUB_TOKEN;
 
-// Repositories and hackathon timeframe
-const repos = ["Test1"];
+// Repositories list
+const repos = [
+  "Team_iterators", "Error_404", "Serenity_Coders", "godcod", "DASA",
+  "GDP_Gurus", "Never_fail", "PASA", "WasteSort_AI", "perception_motion_squad",
+  "Slothes", "3Bit_Wizards", "lemon_tea", "Chatuyantra", "FutureX",
+  "smartResQ", "Tech_Titans", "Error404", "The_DOMinators", "The_Realists",
+  "FloodForesight", "B.AI", "Hp_Tech", "GreenHorn", "Navin_Soch",
+  "Commit_To_Change", "Ctrl_Alt_Delete_Crew", "Team_Odyssey", "Yantra", "Puspa",
+  "Bastion", "API_Avengers", "Dkgtech", "Connect_Ninjas", "Team_Magma",
+  "Shahayak", "Rocket", "Suksma", "AKL", "Traffic_Dai", "0xCoders",
+  "pied_piper", "Sahayog", "Rachana_Yatra", "Ke_Xa", "2_Bit", "Aisle",
+  "Code_Blooded", "Team_Funity", "Team_Semicolon",
+];
+// const repos = ["Test1", "Test2", "Test3", "Test4"]
 
-const since = "2022-12-01T00:00:00Z"; // Keep your start date
-const until = "2025-01-13T23:59:59Z"; // January 10, 2025, 23:59:59 in ISO format
+const since = "2022-12-01T00:00:00Z";
+const until = "2025-01-13T23:59:59Z";
 
-// Helper function to fetch commit data with pagination and excluding "web-flow"
+// Helper function to fetch commit data
 const getCommitData = async (repo) => {
   const url = `https://api.github.com/repos/Noskathon-Lite/${repo}/commits?since=${since}&until=${until}&per_page=100`;
-  const headers = {
-    "Authorization": `Bearer ${TOKEN}`,
-  };
+  const headers = { Authorization: `Bearer ${TOKEN}` };
 
   let commits = [];
   let page = 1;
-  let totalCommits = 0;
-  let webFlowCommits = 0; // Count web-flow commits
 
   try {
-    // Loop through all pages of commits
     while (true) {
       const response = await axios.get(`${url}&page=${page}`, { headers });
-      if (response.data.length === 0) break; // No more commits, stop
+      if (response.data.length === 0) break;
+
       commits = commits.concat(response.data);
-      totalCommits += response.data.length; // Increment total commits count
-
-      // Count web-flow commits (e.g., automated commits from GitHub Actions, etc.)
-      webFlowCommits += response.data.filter((commit) =>
-        commit.committer && commit.committer.login === "web-flow"
-      ).length;
-
-      page++; // Move to the next page
+      page++;
     }
 
-    // Process commit data
     const userCommitsMap = {};
-
     commits.forEach((commit) => {
-      const committerName = commit.committer ? commit.committer.login : "Unknown"; // Handle unknown committers
-
-      // Skip web-flow commits
-      if (committerName === "web-flow") {
-        return;
+      const committerName = commit.committer ? commit.committer.login : "Unknown";
+      if (committerName !== "web-flow") {
+        userCommitsMap[committerName] = (userCommitsMap[committerName] || 0) + 1;
       }
-
-      // Count user commits
-      userCommitsMap[committerName] = (userCommitsMap[committerName] || 0) + 1;
     });
 
-    // Format commit data for users
-    const userCommits = Object.keys(userCommitsMap).map((committerName) => ({
-      committer: committerName,
-      commits: userCommitsMap[committerName],
+    const userCommits = Object.keys(userCommitsMap).map((committer) => ({
+      committer,
+      commits: userCommitsMap[committer],
     }));
 
-    return { userCommits, totalCommits, webFlowCommits, userCommitsMap };
+    return {
+      totalCommits: commits.length,
+      webFlowCommits: commits.filter((commit) => commit.committer?.login === "web-flow").length,
+      userCommits,
+    };
   } catch (error) {
-    console.error("Error fetching commits:", error);
-    return { userCommits: [], totalCommits: 0, webFlowCommits: 0, userCommitsMap: {} };
+    if (error.response?.status === 409) {
+      console.warn(`Repository "${repo}" has no commits.`);
+      return { totalCommits: 0, webFlowCommits: 0, userCommits: [] };
+    } else {
+      console.error(`Error fetching commits for repo: ${repo}`, error);
+      return { totalCommits: 0, webFlowCommits: 0, userCommits: [] };
+    }
   }
 };
 
-// Handler for API route to get leaderboard
-export async function GET() {
-  const leaderboard = [];
+// API handler
+export async function GET(request) {
+  const urlParams = new URL(request.url);
+  const page = parseInt(urlParams.searchParams.get("page") || "1", 10);
+  const limit = 10;
 
-  for (const repo of repos) {
-    const teamName = repo; // Extract team name from repository name 
+  // Fetch all repository data
+  const allRepoData = await Promise.all(
+    repos.map(async (repo) => {
+      const { totalCommits, webFlowCommits, userCommits } = await getCommitData(repo);
+      return { team: repo, totalCommits, webFlowCommits, userCommits };
+    })
+  );
 
-    const { userCommits, totalCommits, webFlowCommits, userCommitsMap } = await getCommitData(repo);
+  // Sort by totalCommits in descending order
+  const sortedRepos = allRepoData.sort((a, b) => b.totalCommits - a.totalCommits);
 
-    leaderboard.push({
-      team: teamName,
-      totalCommits,
-      webFlowCommits, // Include web-flow commit count
-      userCommits,    // Include user commit count
-    });
-  }
+  // Paginate sorted data
+  const startIndex = (page - 1) * limit;
+  const endIndex = startIndex + limit;
+  const leaderboard = sortedRepos.slice(startIndex, endIndex);
 
-  leaderboard.sort((a, b) => b.totalCommits - a.totalCommits); // Sort leaderboard by total commits
-
-  console.log("Leaderboard data:", leaderboard);
-
-  return new Response(JSON.stringify(leaderboard), {
-    headers: { "Content-Type": "application/json" },
-  });
+  return new Response(
+    JSON.stringify({
+      leaderboard,
+      totalPages: Math.ceil(repos.length / limit),
+      currentPage: page,
+    }),
+    { headers: { "Content-Type": "application/json" } }
+  );
 }

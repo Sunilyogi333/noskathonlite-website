@@ -5,35 +5,29 @@ import Header from "@/components/Header";
 
 export default function ParticipantCommitsPage() {
   const [leaderboard, setLeaderboard] = useState([]);
+  const [currentPage, setCurrentPage] = useState(1);
+  const [totalPages, setTotalPages] = useState(1);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
 
+  const fetchLeaderboard = async (page) => {
+    try {
+      setLoading(true);
+      const response = await axios.get(`/api/leaderboard?page=${page}`);
+      setLeaderboard(response.data.leaderboard);
+      setTotalPages(response.data.totalPages);
+      setCurrentPage(response.data.currentPage);
+    } catch (error) {
+      console.error("Error fetching leaderboard:", error);
+      setError("Failed to load leaderboard data. Please try again later.");
+    } finally {
+      setLoading(false);
+    }
+  };
+
   useEffect(() => {
-    const fetchLeaderboard = async () => {
-      try {
-        const response = await axios.get("/api/leaderboard");
-        console.log("Leaderboard data:", response.data);
-
-        // Update the leaderboard to match the new structure
-        const updatedLeaderboard = response.data.map((team) => ({
-          ...team,
-          members: team.userCommits
-            .sort((a, b) => (b.commits || 0) - (a.commits || 0)), // Sort members by commits
-        }));
-
-        updatedLeaderboard.sort((a, b) => b.totalCommits - a.totalCommits); // Sort teams by total commits
-
-        setLeaderboard(updatedLeaderboard);
-      } catch (error) {
-        console.error("Error fetching leaderboard:", error);
-        setError("Failed to load leaderboard data. Please try again later.");
-      } finally {
-        setLoading(false);
-      }
-    };
-
-    fetchLeaderboard();
-  }, []);
+    fetchLeaderboard(currentPage);
+  }, [currentPage]);
 
   return (
     <>
@@ -45,7 +39,6 @@ export default function ParticipantCommitsPage() {
         <p className="text-lg text-center text-nosk-grey mb-8">
           Leaderboard based on GitHub commits during the hackathon.
         </p>
-
         {loading ? (
           <div className="text-center min-h-full font-bold text-gray-500">
             <h3>Loading leaderboard...</h3>
@@ -53,9 +46,9 @@ export default function ParticipantCommitsPage() {
         ) : error ? (
           <div className="text-center text-xl text-red-500">{error}</div>
         ) : (
+          <>
           <div className="space-y-8">
-            {leaderboard.length > 0 ? (
-              leaderboard.map((team, index) => (
+          {leaderboard.map((team, index) => (
                 <div
                   key={index}
                   className="bg-nosk-green outline-none mx-auto max-w-7xl md:outline-nosk-green hover:scale-105 duration-300 ease-in-out hover:transition-all md:bg-nosk-white md:outline-4 shadow-lg rounded-lg p-6 space-y-4"
@@ -107,13 +100,40 @@ export default function ParticipantCommitsPage() {
                     </tbody>
                   </table>
                 </div>
-              ))
-            ) : (
-              <p className="text-center text-lg text-gray-500">
-                No leaderboard data available.
-              </p>
-            )}
-          </div>
+              ))}
+            </div>
+
+            {/* Pagination Section */}
+            <div className="flex justify-center items-center mt-10 space-x-4">
+              <button
+                onClick={() => setCurrentPage((prev) => Math.max(prev - 1, 1))}
+                disabled={currentPage === 1}
+                className={`px-6 py-2 rounded-md font-semibold text-white ${
+                  currentPage === 1
+                    ? "bg-gray-400 cursor-not-allowed"
+                    : "bg-nosk-green hover:bg-nosk-dark-green transition"
+                }`}
+              >
+                Previous
+              </button>
+              <span className="text-lg font-medium">
+                Page {currentPage} of {totalPages}
+              </span>
+              <button
+                onClick={() =>
+                  setCurrentPage((prev) => Math.min(prev + 1, totalPages))
+                }
+                disabled={currentPage === totalPages}
+                className={`px-6 py-2 rounded-md font-semibold text-white ${
+                  currentPage === totalPages
+                    ? "bg-gray-400 cursor-not-allowed"
+                    : "bg-nosk-green hover:bg-nosk-dark-green transition"
+                }`}
+              >
+                Next
+              </button>
+            </div>
+          </>
         )}
       </div>
     </>
