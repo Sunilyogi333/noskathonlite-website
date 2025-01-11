@@ -17,8 +17,9 @@ export default function ParticipantCommitsPage() {
         // Update the leaderboard to match the new structure
         const updatedLeaderboard = response.data.map((team) => ({
           ...team,
-          members: team.userCommits
-            .sort((a, b) => (b.commits || 0) - (a.commits || 0)), // Sort members by commits
+          members: team.userCommits.sort(
+            (a, b) => (b.commits || 0) - (a.commits || 0)
+          ), // Sort members by commits
         }));
 
         updatedLeaderboard.sort((a, b) => b.totalCommits - a.totalCommits); // Sort teams by total commits
@@ -38,7 +39,10 @@ export default function ParticipantCommitsPage() {
   return (
     <>
       <Header />
-      <div id="leaderboards" className="container mx-auto px-4 py-8 mt-32 lg:mt-44">
+      <div
+        id="leaderboards"
+        className="container mx-auto px-4 py-8 mt-32 lg:mt-44"
+      >
         <h1 className="font-bold text-center text-nosk-green mb-6">
           Hackathon Leaderboard
         </h1>
@@ -58,32 +62,33 @@ export default function ParticipantCommitsPage() {
               leaderboard.map((team, index) => (
                 <div
                   key={index}
-                  className="bg-nosk-green outline-none mx-auto max-w-7xl md:outline-nosk-green hover:scale-105 duration-300 ease-in-out hover:transition-all md:bg-nosk-white md:outline-4 shadow-lg rounded-lg p-6 space-y-4"
+                  className="bg-nosk-green outline-none mx-auto max-w-7xl md:outline-nosk-green hover:scale-105 duration-300 ease-in-out hover:transition-all md:bg-nosk-white md:outline-4 shadow-lg rounded-lg p-6"
                 >
-                  <h3 className="font-bold md:text-nosk-green text-nosk-white">
+                  <h2 className="font-bold mb-5 md:text-nosk-green text-nosk-white">
                     {team.team}
-                  </h3>
-                  <p className="text-xl md:text-nosk-green text-nosk-white">
+                  </h2>
+                  <p className="text-xl mb-1 md:text-nosk-green text-nosk-white">
                     <strong>Total Commits: </strong>
                     {team.totalCommits}
                   </p>
-                  <p className="text-lg text-nosk-yellow">
+                  <p className="text-base mb-2 text-nosk-yellow">
                     <strong>Web Flow Commits: </strong>
                     {team.webFlowCommits}
                   </p>
                   <table className="min-w-full table-auto border-collapse bg-nosk-white rounded-md">
                     <thead>
                       <tr className="bg-gray-100 text-left">
-                        <th className="px-4 py-2 text-base font-bold underline text-gray-600">
+                        <th className="px-4 py-2 text-lg font-bold underline text-nosk-grey">
                           Contributor
                         </th>
-                        <th className="px-4 py-2 text-base font-bold underline text-gray-600">
+                        <th className="px-4 py-2 text-lg font-bold underline text-nosk-grey">
                           Commits
                         </th>
                       </tr>
                     </thead>
                     <tbody>
-                      {Array.isArray(team.members) && team.members.length > 0 ? (
+                      {Array.isArray(team.members) &&
+                      team.members.length > 0 ? (
                         team.members.map((member, idx) => (
                           <tr key={idx} className="border-t">
                             <td className="px-4 py-2 text-sm text-gray-700">
@@ -98,7 +103,7 @@ export default function ParticipantCommitsPage() {
                         <tr>
                           <td
                             colSpan="2"
-                            className="px-4 py-2 text-sm text-center text-gray-500"
+                            className="px-4 py-4 text-base text-center text-gray-500"
                           >
                             No contributors available
                           </td>
