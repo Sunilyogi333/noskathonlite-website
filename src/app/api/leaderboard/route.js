@@ -77,7 +77,7 @@ export async function GET(request) {
   const allRepoData = await Promise.all(
     repos.map(async (repo) => {
       const { totalCommits, webFlowCommits, userCommits } = await getCommitData(repo);
-      return { team: repo, totalCommits, webFlowCommits, userCommits };
+      return { team: repo, totalCommits, webFlowCommits, members: userCommits };
     })
   );
 
